@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <Box className={ classes.typedContainer}>
       <Grid container justify="center">
-        <h1 style={{color: 'tomato',textAlign: "left", fontFamily: "Roboto Mono", lineHeight:'4.3rem', fontSize: '5rem'}}>JOSEPH <br />REED</h1> 
+        <h1 style={{color: 'tomato',textAlign: "left", fontFamily: "elixia", lineHeight:'6rem', fontSize: '7rem', fontWeight: "100"}}>JOSEPH <br />&nbsp;REED</h1> 
 
       </Grid>
       <Typography variant="h4">

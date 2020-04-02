@@ -22,7 +22,7 @@ body {
   text-shadow: 0 0 5px #C8C8C8;
   overflow: hidden;
   padding: .5rem;
-  margin-top: 2.5rem;
+  margin-top: -1rem;
 }
 
 .terminal::after {
@@ -34,4 +34,9 @@ body {
   height: 100vh; */
   ;
   z-index: 3;
+}
+
+@font-face {
+  font-family: 'elixia';
+  src: url('./fonts/Aquawax\ Light\ Trial.ttf');  
 }

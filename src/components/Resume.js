@@ -131,22 +131,27 @@ const Resume = () => {
               variant="h5" 
               align="center" 
               className={classes.subHeading}>
-              Platoon Leadership
+              Heavy Signal Platoon Leader
             </Typography>
             <Typography 
               variant="body1" 
               align="center"
               style={{color: "tomato"}}
               >
-              US Army Reserve
+              United States Army Reserve
             </Typography>
             <Typography 
               variant="subtitle1" 
               align="center"
               style={{color: "tan"}}
               >
-              Primary planner for soldier training and operations. Managed millions of dollars worth of vehicles and inventory. Supervisor of all mission execution including large vehicular movements, mass communication equipment setup, weapons
-firing ranges etc.
+              - Primary planner for platoon of
+soldiers’ training and operations <br />
+              - Manage 5 million dollars’ worth of vehicles
+and equipment <br />
+              - Supervisor of all event execution including
+large vehicular movements and mass
+network communication equipment setup
             </Typography>
           </Box>
           <Typography 
@@ -159,7 +164,7 @@ firing ranges etc.
               variant="h5" 
               align="center" 
               className={classes.subHeading}>
-              Web Design
+              Full Stack Developer
             </Typography>
             <Typography 
               variant="body1" 
@@ -175,7 +180,8 @@ firing ranges etc.
               >
               - Build sites that have high creative or experimental value <br />
               - Prototype and execute front end animations and transitions <br />
-              - Collaborate on community focused initiatives 
+              - Rapid iteration of deployment and
+refactoring for optimal performance  
             </Typography>
           </Box>
         </Box>
