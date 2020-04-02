@@ -145,7 +145,8 @@ const Resume = () => {
               align="center"
               style={{color: "tan"}}
               >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime aliquam enim officia corporis voluptatibus minus ipsam doloremque totam vero.
+              Primary planner for soldier training and operations. Managed millions of dollars worth of vehicles and inventory. Supervisor of all mission execution including large vehicular movements, mass communication equipment setup, weapons
+firing ranges etc.
             </Typography>
           </Box>
           <Typography 
@@ -165,14 +166,16 @@ const Resume = () => {
               align="center"
               style={{color: "tomato"}}
               >
-              company name where working
+              Freelance/Opensource
             </Typography>
             <Typography 
               variant="subtitle1" 
               align="center"
               style={{color: "tan"}}
               >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime aliquam enim officia corporis voluptatibus minus ipsam doloremque totam vero.
+              - Build sites that have high creative or experimental value <br />
+              - Prototype and execute front end animations and transitions <br />
+              - Collaborate on community focused initiatives 
             </Typography>
           </Box>
         </Box>
