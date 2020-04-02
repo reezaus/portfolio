@@ -8,8 +8,9 @@ body {
 }
 
 .terminal {
-  justify-content: center;
+  justify-content: right;
   text-align: left;
+  margin: auto;
   width: 17rem;
   height: 2.4rem;
   border-radius: .2rem;

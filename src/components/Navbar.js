@@ -59,12 +59,12 @@ const menuIcons = [
   },
   {
     listIcon: <ContactMail />,
-    listText: "Contacts",
-    listPath: "/contacts"
+    listText: "Contact",
+    listPath: "/contact"
   }
 ]
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [state, setState] = useState({
     right: false,
   }) 
@@ -105,7 +105,7 @@ const Navbar = () => {
           <IconButton onClick={toggleSlider("right", true)}>
             <MenuIcon style={{ color: "white" }}/>
           </IconButton>
-          <Typography variant="h6" style={{ color: "white" }}>Portfolio</Typography>
+            <Typography variant="h6" style={{ color: "white" }}>{props.page}</Typography>
           <MobilRightMenuSlider 
             anchor="right"
             open={state.right}

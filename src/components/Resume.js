@@ -108,7 +108,7 @@ const Resume = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar page="Resume"/>
       <Box 
         component="header" 
         className={ classes.mainContainer }>

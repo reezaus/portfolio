@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Box, Typography, Grid, Avatar } from '@material-ui/core'
-import avatar from '../images/portrait.png'
+import { Box, Typography, Grid } from '@material-ui/core'
 import Typed from 'react-typed'
 
 // CSS Styles
@@ -34,10 +33,9 @@ const Header = () => {
   return (
     <Box className={ classes.typedContainer}>
       <Grid container justify="center">
-        <h1 style={{color: 'tomato',textAlign: "left", fontFamily: "elixia", lineHeight:'6rem', fontSize: '7rem', fontWeight: "100"}}>JOSEPH <br />&nbsp;REED</h1> 
-
+        <h1 style={{color: 'tomato',textAlign: "center", fontFamily: "elixia", lineHeight:'6rem', fontSize: '7rem', fontWeight: "100"}}>JOSEPH <br />REED</h1> 
       </Grid>
-      <Typography variant="h4">
+      <Typography variant="h4" style={{padding: 'auto'}}>
         <div className="terminal">
           <div style={{float: "left"}}>>_&nbsp;</div>
           <div>

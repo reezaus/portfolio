@@ -14,7 +14,7 @@ const Home = () => {
   const classes = useStyles()
   return (
     <div>
-      <Navbar />
+      <Navbar page="Home"/>
       <Header />
       <Particles canvasClassName={classes.particlesCanvas} />
     </div>
