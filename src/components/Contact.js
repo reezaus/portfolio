@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     position: "absolute"
   },
   cardContainer: {
-    margin: "5rem auto",
+    margin: "2.5rem",
     marginTop: "10%",
     minWidth: "40%",
     padding: '1.25rem'

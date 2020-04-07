@@ -1,19 +1,18 @@
+
+
+
+
 :root {
-  background: #E5E5E5;
-  max-width: 100%;
-  overflow: hidden
-}
-
-
-
-.boxy {
-  background: url('../src/images/coffee-apple3.jpg') repeat center fixed;
+  background: url('../src/images/coffee-apple3.jpg') center fixed repeat;
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
   background: cover;
-  
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh;
 }
+
 body {
   max-height: 100%;
   width: 100%;

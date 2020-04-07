@@ -20,7 +20,9 @@ import project4 from '../images/mern-stack.jpg'
 const useStyles = makeStyles({
   mainContainer: {
     background: "#E5E5E5",
-    minHeight: "100%",
+    height: "100%",
+    width: "100%",
+    position: "absolute"
   },
   cardContainer: {
     maxWidth: 345,
