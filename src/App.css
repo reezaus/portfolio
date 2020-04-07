@@ -1,24 +1,26 @@
-
-
-
-
-:root {
-  background: url('../src/images/coffee-apple3.jpg') center fixed repeat;
+#root {
+  background: #E5E5E5;
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
   background: cover;
-  z-index: 1;
-  overflow: hidden;
-  min-height: 100vh;
+  z-index: 0;
 }
 
 body {
-  max-height: 100%;
-  width: 100%;
-  z-index: 4;
-  margin: 0;
+  background: url(./images/coffee-apple3.jpg) no-repeat center center fixed;
+  -webkit-background: cover;
+  -moz-background: cover;
+  -o-background: cover;
+  background: cover;
+  z-index: 2;
 }
+
+@font-face {
+  font-family: 'elixia';
+  src: url('./fonts/Aquawax\ Light\ Trial.ttf');  
+}
+
 .terminal {
   justify-content: right;
   text-align: left;
@@ -36,20 +38,4 @@ body {
   overflow: hidden;
   padding: .5rem;
   margin-top: -1rem;
-}
-
-.terminal::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* width: 100vw;
-  height: 100vh; */
-  ;
-  z-index: 3;
-}
-
-@font-face {
-  font-family: 'elixia';
-  src: url('./fonts/Aquawax\ Light\ Trial.ttf');  
 }

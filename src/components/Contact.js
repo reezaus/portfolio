@@ -23,7 +23,8 @@ const useStyles = makeStyles({
     margin: "2.5rem",
     marginTop: "10%",
     minWidth: "40%",
-    padding: '1.25rem'
+    padding: '1.25rem',
+    maxWidth: 345
   }
 })
 const Contact = () => {
