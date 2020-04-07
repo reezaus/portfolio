@@ -38,7 +38,7 @@ const Header = () => {
       <Grid container justify="center">
       </Grid>
       <Typography className={classes.title} variant="h4">
-        JOSEPH <br/>REED
+        &nbsp;JOSEPH <br/>REED
       </Typography>
       <br />
       <br />
