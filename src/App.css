@@ -1,12 +1,22 @@
-body {
-  background: url('./images/coffee-apple.jpg') no-repeat center center fixed;
+:root {
+  background: #E5E5E5
+}
+
+
+
+.benis {
+  background: url('../src/images/coffee-apple3.jpg') repeat center fixed;
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
   background: cover;
   width: 100%;
 }
-
+body {
+  max-height: 100%;
+  width: 100%;
+  z-index: 4;
+}
 .terminal {
   justify-content: right;
   text-align: left;

@@ -23,11 +23,12 @@ import {
   Apps,
   ContactMail
 } from '@material-ui/icons'
+import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
     width: 250,
-    background: "#222",
+    background: "#232F34",
     height: "100%" 
   },
   avatar: {
@@ -100,7 +101,7 @@ const Navbar = (props) => {
   return (
     <>
     <Box component="nav">
-      <AppBar position="static" style={{ background: "#222", width: "100%" }}> 
+      <AppBar position="static" style={{ background: "#232F34", width: "100%" }}> 
         <Toolbar>
           <IconButton onClick={toggleSlider("right", true)}>
             <MenuIcon style={{ color: "white" }}/>
@@ -111,6 +112,7 @@ const Navbar = (props) => {
             open={state.right}
             onClose={toggleSlider("right", false)}>
             {sideList("right")}
+            <Footer />
           </MobilRightMenuSlider>
         </Toolbar>
       </AppBar>

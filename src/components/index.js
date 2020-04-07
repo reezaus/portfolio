@@ -6,15 +6,15 @@ import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles({
   particlesCanvas: {
-    position: "absolute"
+    position: "relative"
   }
 })
 
 const Home = () => {
   const classes = useStyles()
   return (
-    <div>
-      <Navbar page="Home"/>
+    <div className='benis'>
+    <Navbar page="Home"/>
       <Header />
       <Particles canvasClassName={classes.particlesCanvas} />
     </div>

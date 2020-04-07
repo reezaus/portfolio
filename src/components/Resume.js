@@ -5,7 +5,9 @@ import Navbar from './Navbar'
 
 const useStyles = makeStyles(theme => ({
   mainContainer: {
-    background: "#233"
+    background: "#E5E5E5",
+    minHeight: "100%",
+    position: "relative"
   },
   timeLine: {
     position: "relative",
@@ -93,11 +95,11 @@ const useStyles = makeStyles(theme => ({
   },
   heading: {
     color: "tomato",
-    padding: "3rem 0",
+    padding: "2rem 0",
     textTransform: "uppercase"
   },
   subHeading: {
-    color: "white",
+    color: "tomato",
     padding: "0",
     textTransform: "uppercase"
   }
@@ -109,8 +111,8 @@ const Resume = () => {
   return (
     <>
       <Navbar page="Resume"/>
-      <Box 
-        component="header" 
+      <Box
+        component="div" 
         className={ classes.mainContainer }>
         <Typography 
           variant="h4" 
@@ -136,14 +138,14 @@ const Resume = () => {
             <Typography 
               variant="body1" 
               align="center"
-              style={{color: "tomato"}}
+              style={{color: "#4A6572"}}
               >
               United States Army Reserve
             </Typography>
             <Typography 
               variant="subtitle1" 
               align="center"
-              style={{color: "tan"}}
+              style={{color: "#344955"}}
               >
               - Primary planner for platoon of
 soldiers’ training and operations <br />
@@ -169,14 +171,14 @@ network communication equipment setup
             <Typography 
               variant="body1" 
               align="center"
-              style={{color: "tomato"}}
+              style={{color: "#4A6572"}}
               >
               Freelance/Opensource
             </Typography>
             <Typography 
               variant="subtitle1" 
               align="center"
-              style={{color: "tan"}}
+              style={{color: "#344955"}}
               >
               - Build sites that have high creative or experimental value <br />
               - Prototype and execute front end animations and transitions <br />

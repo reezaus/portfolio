@@ -12,19 +12,22 @@ import {
   Button,
   Typography
 } from '@material-ui/core'
-import project1 from '../images/html-css-javascript-lg.jpg'
+import project1 from '../images/las-cazuelas-logo.jpg'
 import project2 from '../images/javascript-fullstack.jpg'
 import project3 from '../images/react-redux.jpg'
 import project4 from '../images/mern-stack.jpg'
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#233",
-    height: "100%",
+    background: "#E5E5E5",
+    minHeight: "100%",
   },
   cardContainer: {
     maxWidth: 345,
     margin: "5rem auto"
+  },
+  muiCardMediaImg: {
+    objectFit: "cover"
   }
 })
 
@@ -39,6 +42,7 @@ const Portfolio = () => {
           <Card className={classes.cardContainer}>
             <CardActionArea>
               <CardMedia 
+                className={classes.muiCardMediaImg}
                 component="img"
                 alt="project"
                 height="140"
@@ -46,10 +50,10 @@ const Portfolio = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Project 1
+                  Las Cazuelas Restaurant
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus cum eaque doloremque pariatur minima exercitationem deleniti iusto natus officia asperiores cumque autem voluptates laudantium ratione harum dolore, dignissimos sed repudiandae.
+                  Restaurant homepage built with Node, Express, React, and Boostrap. 
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -57,7 +61,7 @@ const Portfolio = () => {
                 <Button size="small" color="primary">
                   Preview
                 </Button>
-                <Button size="small" color="primary">
+                <Button href="https://vast-inlet-20675.herokuapp.com/" size="small" color="primary">
                   Live Demo
                 </Button>
               </CardActions>

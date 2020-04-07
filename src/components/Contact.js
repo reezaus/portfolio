@@ -10,18 +10,20 @@ import {
   TextField,
   Typography
 } from '@material-ui/core'
+import SendIcon from '@material-ui/icons/Send'
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#233",
+    background: "#E5E5E5",
     height: "100%",
     width: "100%",
     position: "absolute"
   },
   cardContainer: {
     margin: "5rem auto",
+    marginTop: "10%",
     minWidth: "40%",
-    padding: '2rem'
+    padding: '1.25rem'
   }
 })
 const Contact = () => {
@@ -31,6 +33,9 @@ const Contact = () => {
   const [email, setEmail] = React.useState('')
   const [message, setMessage] = React.useState('')
 
+  const handleNameChange = (event) => {
+    setName(event.target.value)
+  }
   const handleEmailChange = (event) => {
     setEmail(event.target.value)
   }
@@ -38,9 +43,7 @@ const Contact = () => {
   const handleMessageChange = (event) => {
     setMessage(event.target.value)
   }
-  const handleNameChange = (event) => {
-    setEmail(event.target.value)
-  }
+  
 
 
 
@@ -54,7 +57,7 @@ const Contact = () => {
               Get in touch
             </Typography>
             <br />
-            <form>
+            <form action="/" method="POST">
             <TextField
                 value={name} 
                 label="Name" 
@@ -75,17 +78,15 @@ const Contact = () => {
               <TextField
                 value={message}
                 label="Message"
-                rows="4"
+                rows="3"
                 multiline
                 onChange={handleMessageChange}
-                label="Message"
-                multiline
                 fullWidth
                 margin="normal"
               />
-              <br/>
-              <br/>
-              <Button style={{margin: '0  0'}} variant="contained">Send</Button>
+              <Button type="submit" color="primary" style={{marginTop: '2rem'}}variant="contained" fullWidth={true} endIcon={<SendIcon/>} className={classes.button}>
+              Contact Me
+              </Button>
             </form>
           </CardContent>
         </Card>

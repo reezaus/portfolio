@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography, Grid } from '@material-ui/core'
 import Typed from 'react-typed'
 
+
 // CSS Styles
 const useStyles = makeStyles( theme => ({
   avatar: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles( theme => ({
     margin: theme.spacing(1)
   },
   title: {
-    color: "tomato"
+    color: "F9AA33"
   },
   subtitle: {
     color: "tan",
@@ -22,7 +23,7 @@ const useStyles = makeStyles( theme => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50% )",
-    width: "100%vw",
+    width: "100%",
     textAlign: "center",
     zIndex: 1
   }
