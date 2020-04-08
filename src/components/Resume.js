@@ -1,6 +1,17 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@material-ui/core";
+import 
+  { Box,
+    CardHeader,
+    CardContent,
+    Card,
+    Grid,
+    Icon,
+    Typography,
+    withTheme,
+    withStyles,
+    StyleRulesCallback,
+    StyledComponentProps } from "@material-ui/core";
 import Navbar from "./Navbar";
 
 const useStyles = makeStyles(theme => ({
@@ -9,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   timeLine: {
     position: "relative",
-    padding: "1rem",
+    padding: "1.5rem",
     margin: "0 auto",
     "&:before": {
       content: "''",
@@ -34,7 +45,6 @@ const useStyles = makeStyles(theme => ({
   },
   timeLineItem: {
     padding: "1rem",
-    borderBottom: "2px solid tan",
     position: "relative",
     margin: "1rem 3rem 1rem 1rem",
     clear: "both",
@@ -58,7 +68,6 @@ const useStyles = makeStyles(theme => ({
       "&:nth-of-type(2n)": {
         float: "right",
         margin: "1rem",
-        borderColor: "tan"
       },
       "&:nth-of-type(2n):before": {
         right: "auto",
@@ -69,13 +78,14 @@ const useStyles = makeStyles(theme => ({
   },
   timeLineYear: {
     textAlign: "center",
+    borderRadius: "1.5rem",
     maxWidth: "9.375rem",
     margin: "0 3rem 0 auto",
     fontSize: "1.8rem",
     background: "tomato",
     color: "white",
     lineHeight: 1,
-    padding: "0.5rem 0 1rem",
+    padding: "1rem",
     "&:before": {
       display: "none"
     },
@@ -90,16 +100,6 @@ const useStyles = makeStyles(theme => ({
         display: "none"
       }
     }
-  },
-  heading: {
-    color: "tomato",
-    padding: "3rem 0",
-    textTransform: "uppercase"
-  },
-  subHeading: {
-    color: "#232F34",
-    padding: "0",
-    textTransform: "uppercase"
   }
 }));
 
@@ -109,9 +109,6 @@ const Resume = () => {
     <>
       <Navbar page="Resume"/>
       <Box component="header" className={classes.mainContainer}>
-        <Typography variant="h4" align="center" className={classes.heading}>
-          working experience
-        </Typography>
         <Box component="div" className={classes.timeLine}>
           <Typography
             variant="h2"
@@ -119,67 +116,42 @@ const Resume = () => {
           >
             2019
           </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              aligh="center"
-              className={classes.subHeading}
-            >
-              Heavy Signal Platoon Leader
+          <Card component="div" className={classes.timeLineItem}>
+            <CardHeader title="Heavy Signal Platoon Leader" subheader="United States Army Reserve">
+            </CardHeader>
+            <CardContent>
+
+            <Typography>
+              Primary planner for platoon of soldiers’ training and operations
+              <br/>
+              <br/>
+              Manage 5 million dollars’ worth of vehicles and equipment
+              <br/>
+              <br/>
+              Supervisor of all event execution including large vehicular movements and mass network communication equipment setup
             </Typography>
-            <Typography
-              variant="body1"
-              aligh="center"
-              style={{ color: "#4A6572" }}
-            >
-              United States Army Reserve
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              aligh="center"
-              style={{ color: "#344955" }}
-            >
-              - Primary planner for platoon of
-soldiers’ training and operations <br />
-              - Manage 5 million dollars’ worth of vehicles
-and equipment <br />
-              - Supervisor of all event execution including
-large vehicular movements and mass
-network communication equipment setup
-            </Typography>
-          </Box>
+            </CardContent>
+          </Card>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
             2020
           </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              aligh="center"
-              className={classes.subHeading}
-            >
-              Full Stack Developer
-            </Typography>
-            <Typography
-              variant="body1"
-              aligh="center"
-              style={{ color: "#4A6572" }}
-            >
-              Freelance/Opensource
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              aligh="center"
-              style={{ color: "#344955" }}
-            >
-              - Build sites that have high creative or experimental value <br />
-              - Prototype and execute front end animations and transitions <br />
-              - Rapid iteration of deployment and
-refactoring for optimal performance  
-            </Typography>
-          </Box>
+          <Card component="div" className={classes.timeLineItem}>
+            <CardHeader title="Full Stack Developer" subheader="Freelance"></CardHeader>
+            <CardContent>
+              <Typography>
+                Build sites that have high creative or experimental value 
+                <br />
+                <br />
+                Prototype and execute front end animations and transitions 
+                <br />
+                <br />
+                Rapid iteration of deployment and refactoring for optimal performance  
+              </Typography>
+            </CardContent>
+          </Card>
         </Box>
       </Box>
     </>

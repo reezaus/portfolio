@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 345,
     margin: "5rem auto",
-  },
+  }
 });
 
 const Portfolio = () => {
@@ -50,7 +50,7 @@ const Portfolio = () => {
                   Las Cazuelas Restaurant
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Restaurant homepage built with Node, Express, React, and Bootstrap. 
+                Full restaurant homepage with customized ordering functionality and admin dashboard built with Nodemailer, Express, React, and Bootstrap. 
                 </Typography>
               </CardContent>
             </CardActionArea>
