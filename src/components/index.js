@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Header from "./Header2";
 import Particles from "react-particles-js";
 import { makeStyles } from "@material-ui/styles";
+import PortfolioMini from "./PortfolioMini";
 
 const useStyles = makeStyles({
   particlesCanva: {
@@ -18,6 +19,7 @@ const Home = () => {
     <>
       <Navbar page="Home"/>
       <Header />
+      <PortfolioMini/>
       <Particles
         canvasClassName={classes.particlesCanva}
         params={{

@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
     width: 250,
     background: "#232F34",
-    height: "100%" 
+    height: "100%", 
   },
   avatar: {
     display: "block",
@@ -101,7 +101,7 @@ const Navbar = (props) => {
   return (
     <>
     <Box component="nav">
-      <AppBar position="static" style={{ background: "#232F34", width: "100%" }}> 
+      <AppBar position="fixed" style={{ background: "#232F34", width: "100%" }}> 
         <Toolbar>
           <IconButton onClick={toggleSlider("right", true)}>
             <MenuIcon style={{ color: "white" }}/>

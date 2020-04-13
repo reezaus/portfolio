@@ -1,5 +1,5 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Box,
   Grid,
@@ -9,22 +9,26 @@ import {
   CardContent,
   CardMedia,
   Button,
-  Typography,
-} from "@material-ui/core";
-import Navbar from "./Navbar";
-import project1 from "../images/las-cazuelas-logo.jpg";
-import project2 from "../images/javascript-fullstack.jpg";
-import project3 from "../images/react-redux.jpg";
-import project4 from "../images/mern-stack.jpg";
+  Typography
+} from '@material-ui/core';
+import Navbar from './Navbar';
+import project1 from '../images/las-cazuelas-logo.jpg';
+import project2 from '../images/javascript-fullstack.jpg';
+import project3 from '../images/react-redux.jpg';
+import project4 from '../images/mern-stack.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#E5E5E5",
-    height: "100%",
+    margin: '0',
+    paddingTop: '5%',
+    background: '#FAFAFA',
+    height: '100vh',
+    width: '100%',
+    position: 'absolute'
   },
   cardContainer: {
     maxWidth: 345,
-    margin: "5rem auto",
+    margin: '5rem auto'
   }
 });
 
@@ -50,7 +54,9 @@ const Portfolio = () => {
                   Las Cazuelas Restaurant
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Full restaurant homepage with customized ordering functionality and admin dashboard built with Nodemailer, Express, React, and Bootstrap. 
+                  Full restaurant homepage with customized ordering
+                  functionality and admin dashboard built with Nodemailer,
+                  Express, React, and Bootstrap.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -58,7 +64,11 @@ const Portfolio = () => {
               <Button size="small" color="primary">
                 Preview
               </Button>
-              <Button href="https://vast-inlet-20675.herokuapp.com/" size="small" color="primary">
+              <Button
+                href="https://vast-inlet-20675.herokuapp.com/"
+                size="small"
+                color="primary"
+              >
                 Live Demo
               </Button>
             </CardActions>

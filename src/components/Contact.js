@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import Navbar from './Navbar'
 import { makeStyles } from '@material-ui/core/styles'
 import {
@@ -14,14 +15,14 @@ import SendIcon from '@material-ui/icons/Send'
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#E5E5E5",
+    background: "#FAFAFA",
     height: "100%",
     width: "100%",
     position: "absolute"
   },
   cardContainer: {
     margin: "2.5rem",
-    marginTop: "10%",
+    marginTop: "20%",
     minWidth: "40%",
     padding: '1.25rem',
     maxWidth: 345
@@ -44,8 +45,18 @@ const Contact = () => {
   const handleMessageChange = (event) => {
     setMessage(event.target.value)
   }
-  
 
+
+const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const user = name
+    axios.post('http://localhost/5000/', {user})
+    .then(res=>{
+      console.log(res);
+      console.log(res.data);
+      window.location = "/contact" //This line of code will redirect you once the submission is succeed
+    })
+}
 
 
   return (
@@ -58,7 +69,7 @@ const Contact = () => {
               Get in touch
             </Typography>
             <br />
-            <form action="/" method="POST">
+            <form onSubmit={handleFormSubmit}>
             <TextField
                 value={name} 
                 label="Name" 
