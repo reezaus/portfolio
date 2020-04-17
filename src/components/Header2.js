@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     color: "tomato",
     fontFamily: "elixia",
-    fontSize: '6rem',
+    fontSize: '5rem',
     lineHeight: '6rem'
   },
   subtitle: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "100vw",
+    width: "100%",
     textAlign: "center",
     zIndex: 1
   }

@@ -21,8 +21,8 @@ const useStyles = makeStyles({
   mainContainer: {
     margin: '0',
     paddingTop: '5%',
-    background: '#FAFAFA',
-    height: '100vh',
+    background: '#E5E5E5',
+    height: '100vw',
     width: '100%',
     position: 'absolute'
   },

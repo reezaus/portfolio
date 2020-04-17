@@ -11,12 +11,11 @@ import Navbar from './Navbar';
 
 const useStyles = makeStyles(theme => ({
   mainContainer: {
-    margin: '0%',
-    paddingTop: '10%',
-    background: '#FAFAFA',
-    height: '100vh',
+    margin: 0,
+    paddingTop: '8%',
+    background: '#E5E5E5',
     width: '100%',
-    position: 'absolute'
+    position: 'relative'
   },
   timeLine: {
     position: 'relative',
@@ -47,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   timeLineItem: {
     padding: '1rem',
     position: 'relative',
-    margin: '1rem 3rem 1rem 1rem',
+    margin: '.5rem 1.5rem .5rem .5rem',
     clear: 'both',
     '&:after': {
       content: "''",
@@ -124,14 +123,12 @@ const Resume = () => {
             ></CardHeader>
             <CardContent>
               <Typography>
-                Primary planner for platoon of soldiers’ training and operations
-                <br />
-                <br />
-                Manage 5 million dollars’ worth of vehicles and equipment
-                <br />
-                <br />
-                Supervisor of all event execution including large vehicular
-                movements and mass network communication equipment setup
+                <ul>
+                  <li>Primary planner for platoon of soldiers’ training and operations</li>
+                  <li>Manage 5 million dollars’ worth of vehicles and equipment</li>
+                  <li>Supervisor of all event execution including large vehicular
+                movements and mass network communication equipment setup</li>
+                </ul>      
               </Typography>
             </CardContent>
           </Card>
@@ -148,14 +145,11 @@ const Resume = () => {
             ></CardHeader>
             <CardContent>
               <Typography>
-                Build sites that have high creative or experimental value
-                <br />
-                <br />
-                Prototype and execute front end animations and transitions
-                <br />
-                <br />
-                Rapid iteration of deployment and refactoring for optimal
-                performance
+                <ul>
+                  <li>Build sites that have high creative or experimental value</li>
+                  <li>Prototype and execute front end animations and transitions</li>
+                  <li>Rapid iteration of deployment and refactoring for optimal performance</li>
+                </ul>
               </Typography>
             </CardContent>
           </Card>

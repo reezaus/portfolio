@@ -18,10 +18,9 @@ import project4 from '../images/mern-stack.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
-    paddingTop: '5%',
-    top: "100%",
-    background: '#FAFAFA',
-    height: '100vh',
+    top: '100%',
+    background: '#E5E5E5',
+    height: '100vw',
     width: '100%',
     position: 'absolute'
   },

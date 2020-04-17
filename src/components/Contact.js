@@ -15,14 +15,13 @@ import SendIcon from '@material-ui/icons/Send'
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#FAFAFA",
+    background: "#E5E5E5",
     height: "100%",
     width: "100%",
     position: "absolute"
   },
   cardContainer: {
-    margin: "2.5rem",
-    marginTop: "20%",
+    marginTop: "10rem",
     minWidth: "40%",
     padding: '1.25rem',
     maxWidth: 345

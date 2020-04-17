@@ -16,7 +16,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <div class="home">
       <Navbar page="Home"/>
       <Header />
       <PortfolioMini/>
@@ -61,7 +61,7 @@ const Home = () => {
           }
         }}
       />
-    </>
+    </div>
   );
 };
 
