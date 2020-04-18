@@ -16,7 +16,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <div class="home">
+    <div className="home">
       <Navbar page="Home"/>
       <Header />
       <PortfolioMini/>

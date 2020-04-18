@@ -46,15 +46,25 @@ const Contact = () => {
   }
 
 
-const handleFormSubmit = (event) => {
+const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const user = name
-    axios.post('http://localhost/5000/', {user})
-    .then(res=>{
-      console.log(res);
+    const contact = {
+      name, 
+      email, 
+      message
+    }
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+      const body = JSON.stringify(contact);
+      const res = await axios.post('/api/contact', body, config);
       console.log(res.data);
-      window.location = "/contact" //This line of code will redirect you once the submission is succeed
-    })
+    } catch (err) {
+      console.error(err.response.data);
+    }
 }
 
 
@@ -70,6 +80,7 @@ const handleFormSubmit = (event) => {
             <br />
             <form onSubmit={handleFormSubmit}>
             <TextField
+                name='name'
                 value={name} 
                 label="Name" 
                 onChange={handleNameChange}
@@ -79,6 +90,7 @@ const handleFormSubmit = (event) => {
               <br />
               <br />
               <TextField
+                name='email'
                 value={email} 
                 label="Email" 
                 onChange={handleEmailChange}
@@ -87,6 +99,7 @@ const handleFormSubmit = (event) => {
                 />
                 <br/>
               <TextField
+                name='message'
                 value={message}
                 label="Message"
                 rows="3"
