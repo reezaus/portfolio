@@ -12,7 +12,7 @@ import {
   Typography
 } from '@material-ui/core';
 import project1 from '../images/las-cazuelas-logo.jpg';
-import project2 from '../images/javascript-fullstack.jpg';
+import project2 from '../images/githubFinder.png';
 import project3 from '../images/react-redux.jpg';
 import project4 from '../images/mern-stack.jpg';
 
@@ -83,13 +83,11 @@ const PortfolioMini = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Project 2
+                  Github Finder
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Officia architecto natus ipsa dignissimos porro rem neque,
-                  repudiandae libero sapiente iste perferendis quidem quae
-                  numquam ducimus pariatur voluptatem ex! A, laboriosam!
+                  Github user profile finder utilizing github public api built
+                  with react.js
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -97,7 +95,11 @@ const PortfolioMini = () => {
               <Button size="small" color="primary">
                 Preview
               </Button>
-              <Button size="small" color="primary">
+              <Button
+                size="small"
+                color="primary"
+                href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/"
+              >
                 Live Demo
               </Button>
             </CardActions>
