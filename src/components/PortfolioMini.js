@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 import project1 from '../images/las-cazuelas-logo.jpg';
 import project2 from '../images/githubFinder.png';
-import project3 from '../images/react-redux.jpg';
+import project3 from '../images/ContactKeeper.png';
 import project4 from '../images/mern-stack.jpg';
 
 const useStyles = makeStyles({
@@ -58,9 +58,9 @@ const PortfolioMini = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              {/* <Button size="small" color="primary">
                 Preview
-              </Button>
+              </Button> */}
               <Button
                 href="https://vast-inlet-20675.herokuapp.com/"
                 size="small"
@@ -92,9 +92,9 @@ const PortfolioMini = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              {/* <Button size="small" color="primary">
                 Preview
-              </Button>
+              </Button> */}
               <Button
                 size="small"
                 color="primary"
@@ -117,21 +117,18 @@ const PortfolioMini = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Project 3
+                Contact Keeper
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Officia architecto natus ipsa dignissimos porro rem neque,
-                  repudiandae libero sapiente iste perferendis quidem quae
-                  numquam ducimus pariatur voluptatem ex! A, laboriosam!
+                Simple CRUD contacts archiver build with MongoDB, Express, React, Node and the React Context API.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              {/* <Button size="small" color="primary">
                 Preview
-              </Button>
-              <Button size="small" color="primary">
+              </Button> */}
+              <Button size="small" color="primary" href="https://nameless-escarpment-65829.herokuapp.com/login">
                 Live Demo
               </Button>
             </CardActions>
@@ -139,7 +136,7 @@ const PortfolioMini = () => {
         </Grid>
         {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          {/* <Card className={classes.cardContainer}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -161,13 +158,10 @@ const PortfolioMini = () => {
             </CardActionArea>
             <CardActions>
               <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
                 Live Demo
               </Button>
             </CardActions>
-          </Card>
+          </Card> */}
         </Grid>
       </Grid>
     </Box>
