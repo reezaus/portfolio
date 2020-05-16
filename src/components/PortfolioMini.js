@@ -14,7 +14,7 @@ import {
 import project1 from '../images/las-cazuelas-logo.jpg';
 import project2 from '../images/githubFinder.png';
 import project3 from '../images/ContactKeeper.png';
-import project4 from '../images/mern-stack.jpg';
+import project4 from '../images/project4.png';
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -77,34 +77,27 @@ const PortfolioMini = () => {
             <CardActionArea>
               <CardMedia
                 component="img"
-                alt="Project 2"
+                alt="Project 4"
                 height="140"
-                image={project2}
+                image={project4}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Github Finder
+                  CRWN Clothing
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Github user profile finder utilizing github public api built
-                  with react.js
+                  Storefront for clothing brand built with react and redux, custom styling, and backend authentication through Firebase, with payment authentication handled with stripe API.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              {/* <Button size="small" color="primary">
-                Preview
-              </Button> */}
-              <Button
-                size="small"
-                color="primary"
-                href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/"
-              >
+              <Button size="small" color="primary" href="https://dashboard.heroku.com/apps/crwn-apparelite">
                 Live Demo
               </Button>
             </CardActions>
           </Card>
         </Grid>
+        
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -136,32 +129,37 @@ const PortfolioMini = () => {
         </Grid>
         {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
-          {/* <Card className={classes.cardContainer}>
+          <Card className={classes.cardContainer}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                alt="Project 4"
+                alt="Project 2"
                 height="140"
-                image={project4}
+                image={project2}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Project 4
+                  Github Finder
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Officia architecto natus ipsa dignissimos porro rem neque,
-                  repudiandae libero sapiente iste perferendis quidem quae
-                  numquam ducimus pariatur voluptatem ex! A, laboriosam!
+                  Github user profile finder utilizing github public api built
+                  with react.js
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              {/* <Button size="small" color="primary">
+                Preview
+              </Button> */}
+              <Button
+                size="small"
+                color="primary"
+                href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/"
+              >
                 Live Demo
               </Button>
             </CardActions>
-          </Card> */}
+          </Card>
         </Grid>
       </Grid>
     </Box>
