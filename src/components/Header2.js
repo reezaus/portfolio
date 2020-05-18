@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     color: "tomato",
-    fontFamily: "elixia",
+    fontFamily: 'Julius Sans One',
     fontSize: '5rem',
     lineHeight: '6rem'
   },

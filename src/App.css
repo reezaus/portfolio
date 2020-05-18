@@ -21,11 +21,6 @@ body .home{
   z-index: -1;
 }
 
-@font-face {
-  font-family: 'elixia';
-  src: url('./fonts/Aquawax\ Light\ Trial.ttf');
-}
-
 .terminal {
   justify-content: right;
   text-align: left;
