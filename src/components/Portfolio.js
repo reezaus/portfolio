@@ -29,18 +29,18 @@ function getModalStyle() {
   return {
     top: `${top}%`,
     left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
+    transform: `translate(-${top}%, -${left}%)`
   };
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   paper: {
     position: 'absolute',
     width: 400,
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    padding: theme.spacing(2, 4, 3)
   },
   mainContainer: {
     margin: '0',
@@ -55,8 +55,6 @@ const useStyles = makeStyles((theme) => ({
     margin: '5rem auto'
   }
 }));
-
-
 
 const Portfolio = () => {
   const classes = useStyles();
@@ -115,18 +113,24 @@ const Portfolio = () => {
                   CRWN Clothing
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Storefront for clothing brand built with react and redux, custom styling, and backend authentication through Firebase, with payment authentication handled with stripe API.
+                  Storefront for clothing brand built with react and redux,
+                  custom styling, and backend authentication through Firebase,
+                  with payment authentication handled with stripe API.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" href="https://dashboard.heroku.com/apps/crwn-apparelite">
+              <Button
+                size="small"
+                color="primary"
+                href="https://crwn-apparelite.herokuapp.com/"
+              >
                 Live Demo
               </Button>
             </CardActions>
           </Card>
         </Grid>
-        
+
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -139,10 +143,11 @@ const Portfolio = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                Contact Keeper
+                  Contact Keeper
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Simple CRUD contacts archiver build with MongoDB, Express, React, Node and the React Context API.
+                  Simple CRUD contacts archiver build with MongoDB, Express,
+                  React, Node and the React Context API.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -150,7 +155,11 @@ const Portfolio = () => {
               {/* <Button size="small" color="primary">
                 Preview
               </Button> */}
-              <Button size="small" color="primary" href="https://nameless-escarpment-65829.herokuapp.com/login">
+              <Button
+                size="small"
+                color="primary"
+                href="https://nameless-escarpment-65829.herokuapp.com/login"
+              >
                 Live Demo
               </Button>
             </CardActions>

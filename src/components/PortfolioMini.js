@@ -86,18 +86,24 @@ const PortfolioMini = () => {
                   CRWN Clothing
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Storefront for clothing brand built with react and redux, custom styling, and backend authentication through Firebase, with payment authentication handled with stripe API.
+                  Storefront for clothing brand built with react and redux,
+                  custom styling, and backend authentication through Firebase,
+                  with payment authentication handled with stripe API.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" href="https://dashboard.heroku.com/apps/crwn-apparelite">
+              <Button
+                size="small"
+                color="primary"
+                href="https://crwn-apparelite.herokuapp.com/"
+              >
                 Live Demo
               </Button>
             </CardActions>
           </Card>
         </Grid>
-        
+
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -110,10 +116,11 @@ const PortfolioMini = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                Contact Keeper
+                  Contact Keeper
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Simple CRUD contacts archiver build with MongoDB, Express, React, Node and the React Context API.
+                  Simple CRUD contacts archiver build with MongoDB, Express,
+                  React, Node and the React Context API.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -121,7 +128,11 @@ const PortfolioMini = () => {
               {/* <Button size="small" color="primary">
                 Preview
               </Button> */}
-              <Button size="small" color="primary" href="https://nameless-escarpment-65829.herokuapp.com/login">
+              <Button
+                size="small"
+                color="primary"
+                href="https://nameless-escarpment-65829.herokuapp.com/login"
+              >
                 Live Demo
               </Button>
             </CardActions>
