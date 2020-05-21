@@ -19,6 +19,9 @@ const Home = () => {
     <div className="home">
       <Navbar page="Home"/>
       <Header />
+      <div className="benis">
+        <span className="animated bounce"></span>
+      </div>
       <PortfolioMini/>
       <Particles
         canvasClassName={classes.particlesCanva}
