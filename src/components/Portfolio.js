@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
 import {
   Box,
   Grid,
@@ -17,21 +16,6 @@ import project1 from '../images/las-cazuelas-logo.jpg';
 import project2 from '../images/githubFinder.png';
 import project3 from '../images/ContactKeeper.png';
 import project4 from '../images/project4.png';
-
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`
-  };
-}
 
 const useStyles = makeStyles(theme => ({
   paper: {
