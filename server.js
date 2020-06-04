@@ -1,6 +1,5 @@
 //server.js
 const express = require('express');
-var sslRedirect = require('heroku-ssl-redirect');
 const connectDB = require('./config/db');
 const favicon = require('express-favicon');
 const path = require('path');
@@ -9,7 +8,14 @@ const bodyParser = require('body-parser')
 const app = express();
 // Connect Database
 connectDB();
-app.use(sslRedirect());
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
 app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
