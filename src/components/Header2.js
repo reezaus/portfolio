@@ -37,8 +37,11 @@ const Header = () => {
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
       </Grid>
-      <Typography className={classes.title} variant="h4">
-        &nbsp;JOSEPH <br/>REED
+      <Typography className={`${classes.title} animated-left`} variant="h4">
+        &nbsp;JOSEPH
+      </Typography>
+      <Typography className={`${classes.title} animated-right`} variant="h4">
+        REED
       </Typography>
       <br />
       <br />

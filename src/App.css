@@ -80,6 +80,7 @@ body .home{
   overflow: hidden;
   padding: 0.5rem;
   margin-top: -1rem;
+  animation: moveUp .45s ease-out;
 }
 
 ul {
@@ -93,4 +94,50 @@ li {
 
 .MuiCardMedia-img {
   background-size: cover;
+}
+
+.animated-left {
+  animation: moveInLeft .45s ease-out;
+}
+
+.animated-right {
+  animation: moveInRight .45s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
