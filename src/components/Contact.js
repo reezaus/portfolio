@@ -60,7 +60,7 @@ const handleFormSubmit = async (event) => {
         }
       }
       const body = JSON.stringify(contact);
-      const res = await axios.post('/api/contact', body, config);
+      //const res = await axios.post('/api/contact', body, config);
       setName('');
       setEmail('');
       setMessage('');
@@ -73,7 +73,7 @@ const handleFormSubmit = async (event) => {
 
   return (
     <Box component="div" className={classes.mainContainer} >
-      <Navbar page="Contact" />
+      <Navbar page="Message Me" />
       <Grid container justify="center">
         <Card className={classes.cardContainer}>
           <CardContent>

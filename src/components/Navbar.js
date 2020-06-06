@@ -60,7 +60,7 @@ const menuIcons = [
   },
   {
     listIcon: <ContactMail />,
-    listText: "Contact",
+    listText: "Message Me",
     listPath: "/contact"
   }
 ]
