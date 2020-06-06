@@ -1,11 +1,11 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
 import Home from './components/index'
 import CssBaseline from '@material-ui/core/CssBaseline';
-const Portfolio = lazy(() => import('./components/Portfolio'));
-const Contact = lazy(() => import('./components/Contact'));
-const Resume = lazy(() => import('./components/Resume'));
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 
 function App() {

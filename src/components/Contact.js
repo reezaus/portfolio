@@ -61,7 +61,10 @@ const handleFormSubmit = async (event) => {
       }
       const body = JSON.stringify(contact);
       const res = await axios.post('/api/contact', body, config);
-      console.log(res.data);
+      setName('');
+      setEmail('');
+      setMessage('');
+      alert('Message Sent Successfully')
     } catch (err) {
       console.error(err.response.data);
     }

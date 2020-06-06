@@ -23,44 +23,43 @@ const useStyles = makeStyles(theme => ({
     padding: '1.5rem',
     margin: '0 auto',
     '&:before': {
-      content: "''",
-      position: 'absolute',
-      height: '90%',
-      border: '1px solid tan',
-      right: '40px',
-      top: 0
     },
-    // '&:after': {
-    //   content: "''",
-    //   display: 'table',
-    //   clear: 'both'
-    // },
+    '&:after': {
+      content: "''",
+      display: 'table',
+      clear: 'both'
+    },
     [theme.breakpoints.up('md')]: {
       padding: '2rem',
       '&:before': {
-        left: 'calc(50% - 1px)',
-        right: 'auto'
+        content: "''",
+      position: 'absolute',
+      height: '90%',
+      border: '1px solid tan',
+      right: '50%',
+      bottom: '455px'
       }
     }
   },
   timeLineItem: {
     padding: '1rem',
-    position: 'relative',
-    margin: '.5rem 1.5rem .5rem .5rem',
+    position: 'relative', //important
+    margin: '.3rem 1.5rem 3rem .5rem',
+    left: '0',
     clear: 'both',
     '&:after': {
       content: "''",
-      position: 'absolute'
+      // position: 'absolute'
     },
     '&:before': {
       content: "''",
       position: 'absolute',
-      right: '-0.625rem',
-      top: 'calc(50% - 5px)',
+      right: '50%',
       borderStyle: 'solid',
-      borderColor: 'tomato tomato transparent transparent',
+      borderColor: 'transparent',
       borderWidth: '0.625rem',
-      transform: 'rotate(45deg)'
+      transform: 'rotate(45deg)',
+      left: '0',
     },
     [theme.breakpoints.up('md')]: {
       width: '44%',
@@ -68,12 +67,12 @@ const useStyles = makeStyles(theme => ({
       '&:nth-of-type(2n)': {
         float: 'right',
         margin: '1rem'
-      },
-      '&:nth-of-type(2n):before': {
-        right: 'auto',
-        left: '-0.625rem',
-        borderColor: 'transparent transparent tomato tomato'
-      }
+      }, // keeps item floating left or right
+      // '&:nth-of-type(2n):before': {
+      //   right: 'auto',
+      //   left: '-0.625rem',
+      //   borderColor: 'transparent transparent transparent transparent'
+      // }
     }
   },
   timeLineYear: {
@@ -116,7 +115,7 @@ const Resume = () => {
           >
             2019
           </Typography>
-          <Card component="div" className={classes.timeLineItem}>
+          <Card component="div" className={classes.timeLineItem} style={{ marginBottom: '1.5rem', marginTop: '1.5rem'}}>
             <CardHeader
               title="Heavy Signal Platoon Leader"
               subheader="United States Army Reserve"
@@ -138,7 +137,7 @@ const Resume = () => {
           >
             2020
           </Typography>
-          <Card component="div" className={classes.timeLineItem}>
+          <Card component="div" className={classes.timeLineItem} style={{ marginBottom: '1.5rem', marginTop: '1.5rem'}}>
             <CardHeader
               title="Full Stack Developer"
               subheader="Freelance"
