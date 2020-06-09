@@ -29,7 +29,13 @@ router.post(
         message
       });
     
-    await contact.save();
+    await contact.save(function(err){
+      if(err){ 
+        console.log("Error:", err);
+      }else{
+        console.log("success");
+      }
+    });
       
     } catch (err) {
       console.error(err.message);
