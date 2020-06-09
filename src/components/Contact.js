@@ -1,7 +1,7 @@
-import React from 'react'
-import axios from 'axios'
-import Navbar from './Navbar'
-import { makeStyles } from '@material-ui/core/styles'
+import React from 'react';
+import axios from 'axios';
+import Navbar from './Navbar';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Box,
   Button,
@@ -10,99 +10,98 @@ import {
   Grid,
   TextField,
   Typography
-} from '@material-ui/core'
-import SendIcon from '@material-ui/icons/Send'
+} from '@material-ui/core';
+import SendIcon from '@material-ui/icons/Send';
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: "#E5E5E5",
-    height: "100%",
-    width: "100%",
-    position: "absolute"
+    background: '#E5E5E5',
+    height: '100%',
+    width: '100%',
+    position: 'absolute'
   },
   cardContainer: {
-    marginTop: "10rem",
-    minWidth: "40%",
+    marginTop: '10rem',
+    minWidth: '40%',
     padding: '1.25rem',
     maxWidth: 345
   }
-})
+});
 const Contact = () => {
-  const classes = useStyles()
-  
-  const [name, setName] = React.useState('')
-  const [email, setEmail] = React.useState('')
-  const [message, setMessage] = React.useState('')
+  const classes = useStyles();
 
-  const handleNameChange = (event) => {
-    setName(event.target.value)
-  }
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value)
-  }
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [message, setMessage] = React.useState('');
 
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value)
-  }
+  const handleNameChange = event => {
+    setName(event.target.value);
+  };
+  const handleEmailChange = event => {
+    setEmail(event.target.value);
+  };
 
+  const handleMessageChange = event => {
+    setMessage(event.target.value);
+  };
 
-const handleFormSubmit = async (event) => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
     const contact = {
-      name, 
-      email, 
+      name,
+      email,
       message
-    }
+    };
     try {
       const config = {
         headers: {
           'Content-Type': 'application/json'
         }
-      }
+      };
       const body = JSON.stringify(contact);
-      //const res = await axios.post('/api/contact', body, config);
+      await axios.post('/api/contact', body, config);
       setName('');
       setEmail('');
       setMessage('');
-      alert('Message Sent Successfully')
+      alert('Message Sent Successfully');
     } catch (err) {
       console.error(err.response.data);
+      alert(err.response.data.errors[0].msg);
     }
-}
-
+  };
 
   return (
-    <Box component="div" className={classes.mainContainer} >
+    <Box component="div" className={classes.mainContainer}>
       <Navbar page="Message Me" />
       <Grid container justify="center">
         <Card className={classes.cardContainer}>
           <CardContent>
-            <Typography variant="h5" style={{textAlign: 'center'}}>
+            <Typography variant="h5" style={{ textAlign: 'center' }}>
               Get in touch
             </Typography>
             <br />
             <form onSubmit={handleFormSubmit}>
-            <TextField
-                name='name'
-                value={name} 
-                label="Name" 
+              <TextField
+                name="name"
+                value={name}
+                label="Name"
                 onChange={handleNameChange}
                 fullWidth
                 multiline
-                />
+              />
               <br />
               <br />
               <TextField
-                name='email'
-                value={email} 
-                label="Email" 
+                name="email"
+                value={email}
+                label="Email"
                 onChange={handleEmailChange}
                 fullWidth
                 multiline
-                />
-                <br/>
+              />
+              <br />
               <TextField
-                name='message'
+                name="message"
                 value={message}
                 label="Message"
                 rows="3"
@@ -111,15 +110,23 @@ const handleFormSubmit = async (event) => {
                 fullWidth
                 margin="normal"
               />
-              <Button type="submit" color="primary" style={{marginTop: '2rem'}}variant="contained" fullWidth={true} endIcon={<SendIcon/>} className={classes.button}>
-              Contact Me
+              <Button
+                type="submit"
+                color="primary"
+                style={{ marginTop: '2rem' }}
+                variant="contained"
+                fullWidth={true}
+                endIcon={<SendIcon />}
+                className={classes.button}
+              >
+                Contact Me
               </Button>
             </form>
           </CardContent>
         </Card>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
