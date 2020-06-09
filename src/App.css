@@ -33,6 +33,7 @@ body .home{
   background: #fff;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
+  animation-delay: 1.5s;
 }
 
 
@@ -98,37 +99,45 @@ li {
 }
 
 .animated-left {
-  animation: moveInLeft .45s ease-out;
+  animation: moveInLeft .6s ease-out;
+  animation-delay: .5;
 }
 
 .animated-right {
-  animation: moveInRight .45s ease-out;
+  animation: moveInRight .6s ease-out;
+  animation-delay: .5;
 }
 
 @keyframes moveInLeft {
   0% {
-    transform: translateX(-100px);
+    opacity: 0;
+    transform: translateX(-150px);
   }
 
   80% {
+    opacity: .8;
     transform: translateX(10px);
   }
 
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes moveInRight {
   0% {
-    transform: translateX(100px);
+    opacity: 0;
+    transform: translateX(150px);
   }
 
   80% {
+    opacity: .8;
     transform: translateX(-10px);
   }
 
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
