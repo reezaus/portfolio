@@ -16,13 +16,13 @@ import {
   List,
   Typography,
   Box
-} from '@material-ui/core'
+} from '@material-ui/core';
 import {
   AssignmentInd,
   Home,
   Apps,
   ContactMail
-} from '@material-ui/icons'
+} from '@material-ui/icons/';
 import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
@@ -50,8 +50,8 @@ const menuIcons = [
   },
   {
     listIcon: <AssignmentInd />,
-    listText: "Resume",
-    listPath: "/resume"
+    listText: "Experience",
+    listPath: "/experience"
   },
   {
     listIcon: <Apps />,

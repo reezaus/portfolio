@@ -108,6 +108,36 @@ li {
   animation-delay: .5;
 }
 
+.spinner-container {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(195, 195, 195, 0.6);
+  border-radius: 50%;
+  border-top-color: #636767;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+.spinner-overlay {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -151,5 +181,49 @@ li {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.animated-left-card {
+  animation: moveInLeftCard .8s ease-out;
+  animation-delay: .5;
+}
+
+.animated-right-card {
+  animation: moveInRightCard .8s ease-out;
+  animation-delay: .5;
+}
+
+@keyframes moveInLeftCard {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+
+  80% {
+    opacity: .8;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRightCard {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+
+  80% {
+    opacity: .8;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

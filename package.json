@@ -34,7 +34,8 @@
     "dev": "concurrently 'react-scripts start' 'nodemon server.js'",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'build/static/js/*.js' --html result.html"
   },
   "eslintConfig": {
     "extends": "react-app"

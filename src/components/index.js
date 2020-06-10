@@ -1,14 +1,13 @@
-import React from "react";
-import Navbar from "./Navbar";
-import Header from "./Header2";
-import Particles from "react-particles-js";
-import { makeStyles } from "@material-ui/styles";
-import PortfolioMini from './PortfolioMini'
+import React from 'react';
+import Header from './Header2';
+import Particles from 'react-particles-js/';
+import { makeStyles } from '@material-ui/styles';
+import PortfolioMini from './PortfolioMini';
 
 const useStyles = makeStyles({
   particlesCanva: {
-    position: "absolute",
-    opacity: "0.3"
+    position: 'absolute',
+    opacity: '0.3'
   }
 });
 
@@ -17,12 +16,11 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Navbar page="Home"/>
       <Header />
       <div className="benis">
         <span className="animated bounce"></span>
       </div>
-      <PortfolioMini/>
+      <PortfolioMini />
       <Particles
         canvasClassName={classes.particlesCanva}
         params={{
@@ -35,10 +33,10 @@ const Home = () => {
               }
             },
             shape: {
-              type: "circle",
+              type: 'circle',
               stroke: {
                 width: 1,
-                color: "tomato"
+                color: 'tomato'
               }
             },
             size: {

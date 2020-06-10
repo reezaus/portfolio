@@ -42,6 +42,38 @@ const PortfolioMini = () => {
             <CardActionArea>
               <CardMedia
                 component="img"
+                alt="Project 4"
+                height="140"
+                image={project4}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5">
+                  CRWN Clothing
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Storefront for clothing brand built with react and redux,
+                  custom styling, and backend authentication through Firebase,
+                  with payment authentication handled with stripe API.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="small"
+                color="primary"
+                href="https://crwn-apparelite.herokuapp.com/"
+              >
+                VISIT
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        {/* Project 2 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
                 alt="Project 1"
                 height="140"
                 image={project1}
@@ -66,44 +98,11 @@ const PortfolioMini = () => {
                 size="small"
                 color="primary"
               >
-                Live Demo
+                VISIT
               </Button>
             </CardActions>
           </Card>
         </Grid>
-        {/* Project 2 */}
-        <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Project 4"
-                height="140"
-                image={project4}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5">
-                  CRWN Clothing
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Storefront for clothing brand built with react and redux,
-                  custom styling, and backend authentication through Firebase,
-                  with payment authentication handled with stripe API.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                size="small"
-                color="primary"
-                href="https://crwn-apparelite.herokuapp.com/"
-              >
-                Live Demo
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
@@ -133,7 +132,7 @@ const PortfolioMini = () => {
                 color="primary"
                 href="https://nameless-escarpment-65829.herokuapp.com/login"
               >
-                Live Demo
+                VISIT
               </Button>
             </CardActions>
           </Card>
@@ -167,7 +166,7 @@ const PortfolioMini = () => {
                 color="primary"
                 href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/"
               >
-                Live Demo
+                VISIT
               </Button>
             </CardActions>
           </Card>
