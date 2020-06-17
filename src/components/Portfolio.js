@@ -12,7 +12,7 @@ import {
   Typography
 } from '@material-ui/core';
 import Navbar from './Navbar';
-import project1 from '../images/las-cazuelas-logo.jpg';
+import project1 from '../images/imageSearch.png';
 import project2 from '../images/githubFinder.png';
 import project3 from '../images/ContactKeeper.png';
 import project4 from '../images/project4.png';
@@ -90,12 +90,10 @@ const Portfolio = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                  Las Cazuelas Restaurant
+                Unsplash Image Search Web Client
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Full restaurant homepage with customized ordering
-                  functionality and admin dashboard built with Nodemailer,
-                  Express, React, and Bootstrap.
+                Slick and modern front-end for the Unsplash image API
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -104,7 +102,7 @@ const Portfolio = () => {
                 Preview
               </Button> */}
               <Button
-                href="https://vast-inlet-20675.herokuapp.com/"
+                href="https://thawing-dusk-15894.herokuapp.com/"
                 size="small"
                 color="primary"
               >
