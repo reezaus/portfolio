@@ -18,8 +18,7 @@ const Home = () => {
       <div className="benis">
         <span className="animated bounce"></span>
       </div>
-      <div style={{ bottom: '-40vh', position: 'absolute', backgroundColor: '#E5E5E5', height: '40vh', width: '100vw', zIndex: 0, clipPath: 'polygon(0 40%, 100% 0, 100% 100%, 0% 100%)'}}>
-        hi
+      <div className="clip" style={{ bottom: '-40vh', position: 'absolute', backgroundColor: '#E5E5E5', height: '40vh', width: '100vw', zIndex: 0}}>
       </div>
       <PortfolioMini />
       <Particles

@@ -67,6 +67,9 @@ body .home{
   transform:         rotate(45deg);
 }
 
+.clip {
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+}
 .header {
   z-index: -1 !important;
   margin-top: -10rem;
