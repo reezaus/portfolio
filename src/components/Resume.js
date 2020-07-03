@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   timeLine: {
     position: 'relative',
     paddingTop: '3rem',
-    padding: '1rem',
+    padding: '2rem',
     margin: '0 auto',
     '&:before': {},
     '&:after': {
