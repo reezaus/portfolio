@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/index';
@@ -10,7 +10,27 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
-function App() {
+const App = () => {
+  const [label, setLabel] = useState('Home');
+  setInterval(() => {
+    if (window.scrollY > 500 && window.scrollY < 1600) {
+      setLabel('Projects');
+    } else if (window.scrollY > 1600 && window.scrollY < 3800) {
+      setLabel('Experience');
+    } else if (
+      window.scrollY > 3800 &&
+      window.scrollY < 4500 &&
+      window.screen.width < 500
+    ) {
+      setLabel('Experience');
+    } else if (window.scrollY > 4500 && window.screen.width < 500) {
+      setLabel('Contact');
+    } else if (window.scrollY > 3800 && window.screen.width > 500) {
+      setLabel('Contact');
+    } else {
+      setLabel('Home');
+    }
+  }, 500);
   return (
     <>
       <Router>
@@ -22,7 +42,7 @@ function App() {
             <Navbar
               page={
                 window.location.pathname === '/'
-                  ? 'Home'
+                  ? `${label}`
                   : window.location.pathname
               }
             />
@@ -37,6 +57,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;
