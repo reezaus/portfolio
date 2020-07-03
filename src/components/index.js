@@ -3,22 +3,23 @@ import Header from './Header2';
 import Particles from 'react-particles-js/';
 import { makeStyles } from '@material-ui/styles';
 import PortfolioMini from './PortfolioMini';
-
 const useStyles = makeStyles({
   particlesCanva: {
     position: 'absolute',
-    opacity: '0.3'
-  }
+    opacity: '0.3',
+  },
 });
 
 const Home = () => {
   const classes = useStyles();
-
   return (
     <div className="home">
       <Header />
       <div className="benis">
         <span className="animated bounce"></span>
+      </div>
+      <div style={{ bottom: '-40vh', position: 'absolute', backgroundColor: '#E5E5E5', height: '40vh', width: '100vw', zIndex: 0, clipPath: 'polygon(0 40%, 100% 0, 100% 100%, 0% 100%)'}}>
+        hi
       </div>
       <PortfolioMini />
       <Particles
@@ -29,15 +30,15 @@ const Home = () => {
               value: 45,
               density: {
                 enable: true,
-                value_area: 900
-              }
+                value_area: 900,
+              },
             },
             shape: {
               type: 'circle',
               stroke: {
                 width: 1,
-                color: 'tomato'
-              }
+                color: 'tomato',
+              },
             },
             size: {
               value: 8,
@@ -46,8 +47,8 @@ const Home = () => {
                 enable: true,
                 speed: 6,
                 size_min: 0.1,
-                sync: true
-              }
+                sync: true,
+              },
             },
             opacity: {
               value: 1,
@@ -56,10 +57,10 @@ const Home = () => {
                 enable: true,
                 speed: 1,
                 opacity_min: 0.1,
-                sync: true
-              }
-            }
-          }
+                sync: true,
+              },
+            },
+          },
         }}
       />
     </div>

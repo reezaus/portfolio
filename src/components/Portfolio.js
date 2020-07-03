@@ -9,7 +9,7 @@ import {
   CardContent,
   CardMedia,
   Button,
-  Typography
+  Typography,
 } from '@material-ui/core';
 import Navbar from './Navbar';
 import project1 from '../images/imageSearch.png';
@@ -17,27 +17,27 @@ import project2 from '../images/githubFinder.png';
 import project3 from '../images/ContactKeeper.png';
 import project4 from '../images/project4.png';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
     width: 400,
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3)
+    padding: theme.spacing(2, 4, 3),
   },
   mainContainer: {
     margin: '0',
-    paddingTop: '5%',
+    paddingTop: '3%',
     background: '#E5E5E5',
-    height: '100vw',
+    height: '100vh',
     width: '100%',
-    position: 'absolute'
+    position: 'absolute',
   },
   cardContainer: {
     maxWidth: 345,
-    margin: '5rem auto'
-  }
+    margin: '2rem auto 0rem auto',
+  },
 }));
 
 const Portfolio = () => {
@@ -49,8 +49,8 @@ const Portfolio = () => {
       <Grid container justify="center">
         {/* Project 1 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
+          <Card className={classes.cardContainer} style={{ marginTop: '4rem', marginBottom: '-2rem'}}>
+            <CardActionArea href="https://crwn-apparelite.herokuapp.com/">
               <CardMedia
                 component="img"
                 alt="Project 4"
@@ -62,9 +62,9 @@ const Portfolio = () => {
                   CRWN Clothing
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Storefront for clothing brand built with react and redux,
-                  custom styling, and backend authentication through Firebase,
-                  with payment authentication handled with stripe API.
+                  Storefront for clothing brand built with React and Redux,
+                  custom styling, and back-end authentication through Firebase,
+                  with payment authentication handled through Stripe API
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -79,9 +79,10 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
-        {/* Project 2 */}<Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
+        {/* Project 2 */}
+        <Grid item xs={12} sm={8} md={6}>
+          <Card className={classes.cardContainer} style={{ marginTop: '4rem'}}>
+            <CardActionArea href="https://thawing-dusk-15894.herokuapp.com/">
               <CardMedia
                 component="img"
                 alt="Project 1"
@@ -90,10 +91,11 @@ const Portfolio = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5">
-                Unsplash Image Search Web Client
+                  Unsplash Image Search Web Client
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Slick and modern front-end for the Unsplash image API
+                  Slick and modern front-end for the Unsplash image API using
+                  Semantic UI
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -111,12 +113,11 @@ const Portfolio = () => {
             </CardActions>
           </Card>
         </Grid>
-        
 
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
-            <CardActionArea>
+            <CardActionArea href="https://nameless-escarpment-65829.herokuapp.com/login">
               <CardMedia
                 component="img"
                 alt="Project 3"
@@ -128,8 +129,7 @@ const Portfolio = () => {
                   Contact Keeper
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Simple CRUD contacts archiver build with MongoDB, Express,
-                  React, Node and the React Context API.
+                  Simple CRUD contacts archiver build with MongoDB, Express and the React Context API
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -149,8 +149,8 @@ const Portfolio = () => {
         </Grid>
         {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
-            <CardActionArea>
+          <Card className={classes.cardContainer} style={{ marginBottom: '2rem'}}>
+            <CardActionArea href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/">
               <CardMedia
                 component="img"
                 alt="Project 2"
@@ -162,8 +162,8 @@ const Portfolio = () => {
                   Github Finder
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Github user profile finder utilizing github public api built
-                  with react.js
+                  Github user profile finder utilizing Github API built with
+                  React
                 </Typography>
               </CardContent>
             </CardActionArea>

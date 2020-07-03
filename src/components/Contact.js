@@ -11,21 +11,30 @@ import TextField from '@material-ui/core/TextField'
 import SendIcon from '@material-ui/icons/Send';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  mainContainer: {
-    background: '#E5E5E5',
-    height: '100%',
-    width: '100%',
-    position: 'absolute'
-  },
-  cardContainer: {
-    marginTop: '10rem',
-    minWidth: '40%',
-    padding: '1.25rem',
-    maxWidth: 345
+export const Contact = ({ children }) => {
+  let myMargin;
+  if (children) {
+     myMargin = '-8rem'
+  } else {
+    myMargin = '10rem'
   }
-});
-const Contact = () => {
+  const useStyles = makeStyles({
+    mainContainer: {
+      background: '#E5E5E5',
+      height: '100%',
+      width: '100%',
+      position: 'absolute',
+      marginBottom: '0vh'
+    },
+    cardContainer: {
+      marginTop: myMargin,
+      marginBottom: '0',
+      minWidth: '40%',
+      padding: '1.25rem',
+      maxWidth: 345,
+      zIndex: 5
+    }
+  });
   const classes = useStyles();
 
   const [name, setName] = React.useState('');
@@ -70,7 +79,8 @@ const Contact = () => {
 
   return (
     <Box component="div" className={classes.mainContainer}>
-      <Navbar page="Message Me" />
+      {children}
+      { !children && <Navbar page="Message Me" />}
       <Grid container justify="center">
         <Card className={classes.cardContainer}>
           <CardContent>

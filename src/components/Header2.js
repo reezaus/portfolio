@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     transform: "translate(-50%, -50%)",
     width: "100%",
     textAlign: "center",
-    zIndex: 1
+    zIndex: 1,
   }
 }));
 
@@ -50,7 +50,7 @@ const Header = () => {
           <div style={{float: "left"}}>>_&nbsp;</div>
           <div>
             <Typed
-              strings = { ["npx josephereed", "Web Design", "Web Development", "MERN Stack"] }
+              strings = { ["Web Development", "Full-Stack JS", "UI/UX Design"] }
               typeSpeed={40}
               backSpeed={40}
               loop

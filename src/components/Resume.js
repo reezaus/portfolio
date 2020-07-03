@@ -6,51 +6,53 @@ import {
   CardContent,
   CardMedia,
   Card,
-  Typography
+  Typography,
 } from '@material-ui/core';
 import Navbar from './Navbar';
-import army from '../images/army.jpg';
-import react from '../images/reactjs.jpg';
+import army from '../images/armySMALL.jpg';
+import react from '../images/reactjsSMALL.jpg';
+import bio from '../images/bio.jpg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mainContainer: {
     margin: 0,
     paddingTop: '8%',
     background: '#E5E5E5',
     width: '100%',
-    position: 'relative'
+    position: 'relative',
   },
   timeLine: {
     position: 'relative',
     paddingTop: '3rem',
-    padding: '1.5rem',
+    padding: '1rem',
     margin: '0 auto',
     '&:before': {},
     '&:after': {
       content: "''",
       display: 'table',
-      clear: 'both'
+      clear: 'both',
     },
     [theme.breakpoints.up('md')]: {
       padding: '2rem',
       '&:before': {
         content: "''",
         position: 'absolute',
-        height: '90%',
+        height: '64%',
         border: '1px solid tan',
         right: '50%',
-        bottom: '455px'
-      }
-    }
+        bottom: '660px',
+      },
+    },
   },
   timeLineItem: {
     padding: '1rem',
     position: 'relative', //important
-    margin: '.3rem 1.5rem 3rem .5rem',
+    // margin: '.3rem 1.5rem 3rem .5rem',
+    margin: '.3rem auto 0rem auto',
     left: '0',
     clear: 'both',
     '&:after': {
-      content: "''"
+      content: "''",
       // position: 'absolute'
     },
     '&:before': {
@@ -61,21 +63,21 @@ const useStyles = makeStyles(theme => ({
       borderColor: 'transparent',
       borderWidth: '0.625rem',
       transform: 'rotate(45deg)',
-      left: '0'
+      left: '0',
     },
     [theme.breakpoints.up('md')]: {
       width: '44%',
       margin: '1rem',
       '&:nth-of-type(2n)': {
         float: 'right',
-        margin: '1rem'
-      } // keeps item floating left or right
+        margin: '1rem',
+      }, // keeps item floating left or right
       // '&:nth-of-type(2n):before': {
       //   right: 'auto',
       //   left: '-0.625rem',
       //   borderColor: 'transparent transparent transparent transparent'
       // }
-    }
+    },
   },
   timeLineYear: {
     boxShadow: '5px 10px 20px rgba(0,0,0,.2)',
@@ -89,47 +91,91 @@ const useStyles = makeStyles(theme => ({
     lineHeight: 1,
     padding: '1rem',
     '&:before': {
-      display: 'none'
+      display: 'none',
     },
     [theme.breakpoints.up('md')]: {
       textAlign: 'center',
       margin: '0 auto',
       '&:nth-of-type(2n)': {
         float: 'none',
-        margin: '0 auto'
+        margin: '0 auto',
       },
       '&:nth-of-type(2n):before': {
-        display: 'none'
-      }
-    }
-  }
+        display: 'none',
+      },
+    },
+  },
 }));
 
-const Resume = () => {
+export const Experience = ({ children, homepage}) => {
   const classes = useStyles();
   return (
-    <>
-      <Navbar page="Experience" />
-      <Box component="header" className={classes.mainContainer}>
-        <Box component="div" className={classes.timeLine}>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2019
-          </Typography>
-          <Card
-            component="div"
-            className={`${classes.timeLineItem} animated-left-card`}
-            style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
-          >
+    <Box component="header" className={classes.mainContainer}>
+    {children}
+      <Box component="div" className={classes.timeLine}>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2020
+        </Typography>
+        <Card
+          component="div"
+          className={`${classes.timeLineItem} ${!homepage ? 'animated-left-card' : ''}`}
+          style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
+        >
+          <CardMedia
+            component="img"
+            alt="Project 1"
+            height="140"
+            image={react}
+          />
+          <div style={{ padding: '16px' }}>
+            <CardHeader
+              title="Full Stack Developer"
+              subheader="Freelance"
+            ></CardHeader>
+            <CardContent>
+              <ul>
+                <li>
+                  <Typography>
+                    Build modern frontend interfaces with centralized state
+                    management that are intuitive and responsively designed
+                  </Typography>
+                </li>
+                <li>
+                  <Typography>
+                    Knowledge of ES6+, Webpack and best refactoring practices
+                    for low overhead and optimal performance
+                  </Typography>
+                </li>
+                <li>
+                  <Typography>
+                    Extensive Knowledge of React/Redux, Node/Express, MongoDB
+                  </Typography>
+                </li>
+              </ul>
+            </CardContent>
+          </div>
+        </Card>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2019
+        </Typography>
+        <Card
+          component="div"
+          className={`${classes.timeLineItem} ${!homepage ? 'animated-right-card' : ''}`}
+          style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
+        >
           <CardMedia
             component="img"
             alt="Project 1"
             height="140"
             image={army}
           />
-          <div style={{ padding: '16px'}}>
+          <div style={{ padding: '16px' }}>
             <CardHeader
               title="Heavy Signal Platoon Leader"
               subheader="United States Army Reserve"
@@ -138,8 +184,7 @@ const Resume = () => {
               <ul>
                 <li>
                   <Typography>
-                    Primary planner for platoon of soldiers’ training and
-                    operations
+                    Primary planner for a platoon of soldiers’ training and operations  
                   </Typography>
                 </li>
                 <li>
@@ -155,54 +200,60 @@ const Resume = () => {
                 </li>
               </ul>
             </CardContent>
-            </div>
-          </Card>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2020
-          </Typography>
-          <Card
-            component="div"
-            className={`${classes.timeLineItem} animated-right-card`}
-            style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
-          >
-          <CardMedia
-            component="img"
-            alt="Project 1"
-            height="140"
-            image={react}
-          />
-          <div style={{ padding: '16px'}}>
+          </div>
+        </Card>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2018
+        </Typography>
+        <Card
+          component="div"
+          className={`${classes.timeLineItem}`}
+          style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0, zIndex: 2 }}
+        >
+          <CardMedia component="img" alt="Project 1" height="140" image={bio} />
+          <div style={{ padding: '16px' }}>
             <CardHeader
-              title="Full Stack Developer"
-              subheader="Freelance"
+              title="Bachelor of Science in Biochemistry and Molecular Biology"
+              subheader="University of California, Davis"
             ></CardHeader>
             <CardContent>
               <ul>
                 <li>
                   <Typography>
-                    Build sites that have high creative or experimental value
+                    Utilized R programming language for visualization of large
+                    t-test to PCA and clustering, and RNA sequence datasets
                   </Typography>
                 </li>
                 <li>
                   <Typography>
-                    Prototype and execute front end animations and transitions
+                    Conducted bioinformatical analyses with Python's PyLab for
+                    plotting
                   </Typography>
                 </li>
                 <li>
                   <Typography>
-                    Rapid iteration of deployment and refactoring for optimal
-                    performance
+                    Lab experience consisting of PCR, Bradford Assay, A280
+                    assay, SDS PAGE, Western blot analysis
                   </Typography>
                 </li>
               </ul>
             </CardContent>
           </div>
-          </Card>
-        </Box>
+        </Card>
       </Box>
+    </Box>
+  );
+};
+
+const Resume = () => {
+  
+  return (
+    <>
+      <Navbar page="Experience" />
+      <Experience />
     </>
   );
 };

@@ -8,31 +8,33 @@ import Navbar from './components/Navbar';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
-    <Router>
-      <CssBaseline />
-      <Route
-        path="/"
-        render={() => (
-          <Navbar
-            page={
-              window.location.pathname === '/'
-                ? 'Home'
-                : window.location.pathname
-            }
-          />
-        )}
-      />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/experience" component={Resume} />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/contact" component={Contact} />
-      </Switch>
-    </Router>
+      <Router>
+        <CssBaseline />
+        <ScrollToTop />
+        <Route
+          path="/"
+          render={() => (
+            <Navbar
+              page={
+                window.location.pathname === '/'
+                  ? 'Home'
+                  : window.location.pathname
+              }
+            />
+          )}
+        />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/experience" component={Resume} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
+        </Switch>
+      </Router>
     </>
   );
 }
