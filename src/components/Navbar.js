@@ -55,7 +55,7 @@ const menuIcons = [
   },
   {
     listIcon: <Apps />,
-    listText: "Portfolio",
+    listText: "Projects",
     listPath: "/portfolio"
   },
   {

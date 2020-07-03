@@ -127,7 +127,7 @@ export const Contact = ({ children }) => {
                 endIcon={<SendIcon />}
                 className={classes.button}
               >
-                Contact Me
+                Send
               </Button>
             </form>
           </CardContent>

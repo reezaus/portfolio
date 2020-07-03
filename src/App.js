@@ -26,7 +26,7 @@ const App = () => {
     } else if (window.scrollY > 4500 && window.screen.width < 500) {
       setLabel('Contact');
     } else if (window.scrollY > 3800 && window.screen.width > 500) {
-      setLabel('Contact');
+      setLabel('Message Me');
     } else {
       setLabel('Home');
     }
