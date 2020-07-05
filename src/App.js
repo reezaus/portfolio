@@ -43,7 +43,7 @@ const App = () => {
               page={
                 window.location.pathname === '/'
                   ? `${label}`
-                  : window.location.pathname
+                  : window.location.pathname.slice(1).charAt(0).toUpperCase() + window.location.pathname.slice(2)
               }
             />
           )}

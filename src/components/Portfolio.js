@@ -46,7 +46,6 @@ const Portfolio = () => {
 
   return (
     <Box component="div" className={classes.mainContainer}>
-      <Navbar page="Projects" />
       <Grid container justify="center">
         {/* Project 1 */}
         <Grid item xs={12} sm={8} md={6}>

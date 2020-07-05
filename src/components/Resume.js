@@ -253,7 +253,6 @@ const Resume = () => {
   
   return (
     <Container>
-      <Navbar page="Experience" />
       <Experience />
     </Container>
   );

@@ -81,7 +81,6 @@ export const Contact = ({ children }) => {
   return (
     <Box component="div" className={classes.mainContainer}>
       {children}
-      { !children && <Navbar page="Message Me" />}
       <Grid container justify="center">
         <Card className={classes.cardContainer}>
           <CardContent>
