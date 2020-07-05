@@ -16,7 +16,8 @@ export const Contact = ({ children }) => {
   if (children) {
      myMargin = '-8rem'
   } else {
-    myMargin = '10rem'
+    // myMargin = '10rem'
+    myMargin = '15vh'
   }
   const useStyles = makeStyles({
     mainContainer: {

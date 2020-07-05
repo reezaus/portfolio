@@ -87,6 +87,7 @@ body .home{
   height: 60vh;
   background-color: tomato; 
   text-align: center;
+  width: 100vw;
 }
 
 .blue-header {

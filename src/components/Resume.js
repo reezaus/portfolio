@@ -6,6 +6,7 @@ import {
   CardContent,
   CardMedia,
   Card,
+  Container,
   Typography,
 } from '@material-ui/core';
 import Navbar from './Navbar';
@@ -210,7 +211,7 @@ export const Experience = ({ children, homepage}) => {
         </Typography>
         <Card
           component="div"
-          className={`${classes.timeLineItem}`}
+          className={`${classes.timeLineItem} ${!homepage ? 'animated-left-card' : ''}`}
           style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0, zIndex: 2 }}
         >
           <CardMedia component="img" alt="Project 1" height="140" image={bio} />
@@ -251,10 +252,10 @@ export const Experience = ({ children, homepage}) => {
 const Resume = () => {
   
   return (
-    <>
+    <Container>
       <Navbar page="Experience" />
       <Experience />
-    </>
+    </Container>
   );
 };
 
