@@ -4,12 +4,10 @@ const connectDB = require('./config/db');
 const favicon = require('express-favicon');
 const path = require('path');
 const port = process.env.PORT || 5000;
-const bodyParser = require('body-parser');
-var sslRedirect = require('heroku-ssl-redirect');
+const bodyParser = require('body-parser')
 const app = express();
 // Connect Database
 connectDB();
-app.use(sslRedirect());
 app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
