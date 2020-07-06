@@ -1,23 +1,21 @@
 import React from 'react';
 import axios from 'axios';
-import Navbar from './Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField'
+import TextField from '@material-ui/core/TextField';
 import SendIcon from '@material-ui/icons/Send';
 import Typography from '@material-ui/core/Typography';
 
-export const Contact = ({ children }) => {
+export const Contact = ({ children, homepage }) => {
   let myMargin, myBottom;
   if (children) {
-     myMargin = '-8rem'
-     myBottom ='0vh'
+    myMargin = '-8rem';
+    myBottom = '0vh';
   } else {
-    // myMargin = '10rem'
     myMargin = '15vh';
     myBottom = '-30vh';
   }
@@ -27,7 +25,7 @@ export const Contact = ({ children }) => {
       height: '100%',
       width: '100%',
       position: 'absolute',
-      marginBottom: myBottom
+      marginBottom: myBottom,
     },
     cardContainer: {
       marginTop: myMargin,
@@ -36,8 +34,8 @@ export const Contact = ({ children }) => {
       minHeight: 450,
       padding: '1.25rem',
       maxWidth: 345,
-      zIndex: 5
-    }
+      zIndex: 5,
+    },
   });
   const classes = useStyles();
 
@@ -45,29 +43,29 @@ export const Contact = ({ children }) => {
   const [email, setEmail] = React.useState('');
   const [message, setMessage] = React.useState('');
 
-  const handleNameChange = event => {
+  const handleNameChange = (event) => {
     setName(event.target.value);
   };
-  const handleEmailChange = event => {
+  const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
 
-  const handleMessageChange = event => {
+  const handleMessageChange = (event) => {
     setMessage(event.target.value);
   };
 
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     const contact = {
       name,
       email,
-      message
+      message,
     };
     try {
       const config = {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       };
       const body = JSON.stringify(contact);
       await axios.post('/api/contact', body, config);
@@ -85,7 +83,9 @@ export const Contact = ({ children }) => {
     <Box component="div" className={classes.mainContainer}>
       {children}
       <Grid container justify="center">
-        <Card className={classes.cardContainer}>
+        <Card
+          className={`${classes.cardContainer} ${!homepage ? 'moveUp' : ''}`}
+        >
           <CardContent>
             <Typography variant="h5" style={{ textAlign: 'center' }}>
               Get in touch

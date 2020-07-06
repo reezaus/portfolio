@@ -9,19 +9,16 @@ import {
   Container,
   Typography,
 } from '@material-ui/core';
-import Navbar from './Navbar';
 import army from '../images/armySMALL.jpg';
 import react from '../images/reactjsSMALL.jpg';
 import bio from '../images/bio.jpg';
 
-
-
-export const Experience = ({ children, homepage}) => {
-    let myPadding;
+export const Experience = ({ children, homepage }) => {
+  let myPadding;
   if (homepage) {
-    myPadding = 0
+    myPadding = 0;
   } else {
-    myPadding = '8%'
+    myPadding = '8%';
   }
   const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -119,147 +116,168 @@ export const Experience = ({ children, homepage}) => {
   const classes = useStyles();
   return (
     <>
-    {children}
-    <Box component="header" className={classes.mainContainer} style={{ maxWidth: '1200px', margin: 'auto'}}>
-      <Box component="div" className={classes.timeLine}>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2020
-        </Typography>
-        <Card
-          component="div"
-          className={`${classes.timeLineItem} ${!homepage ? 'animated-left-card' : ''}`}
-          style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
-        >
-          <CardMedia
-            component="img"
-            alt="Project 1"
-            height="140"
-            image={react}
-          />
-          <div style={{ padding: '16px' }}>
-            <CardHeader
-              title="Full Stack Developer"
-              subheader="Freelance"
-            ></CardHeader>
-            <CardContent>
-              <ul>
-                <li>
-                  <Typography>
-                    Build modern frontend interfaces with centralized state
-                    management that are intuitive and responsively designed
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Knowledge of ES6+, Webpack and best refactoring practices
-                    for low overhead and optimal performance
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Extensive Knowledge of React/Redux, Node/Express, MongoDB
-                  </Typography>
-                </li>
-              </ul>
-            </CardContent>
-          </div>
-        </Card>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2019
-        </Typography>
-        <Card
-          component="div"
-          className={`${classes.timeLineItem} ${!homepage ? 'animated-right-card' : ''}`}
-          style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
-        >
-          <CardMedia
-            component="img"
-            alt="Project 1"
-            height="140"
-            image={army}
-          />
-          <div style={{ padding: '16px' }}>
-            <CardHeader
-              title="Heavy Signal Platoon Leader"
-              subheader="United States Army Reserve"
-            ></CardHeader>
-            <CardContent>
-              <ul>
-                <li>
-                  <Typography>
-                    Primary planner for a platoon of soldiers’ training and operations  
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Manage 5 million dollars’ worth of vehicles and equipment
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Supervisor of all event execution including large vehicular
-                    movements and mass network communication equipment setup
-                  </Typography>
-                </li>
-              </ul>
-            </CardContent>
-          </div>
-        </Card>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2018
-        </Typography>
-        <Card
-          component="div"
-          className={`${classes.timeLineItem} ${!homepage ? 'animated-left-card' : ''}`}
-          style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0, zIndex: 2 }}
-        >
-          <CardMedia component="img" alt="Project 1" height="140" image={bio} />
-          <div style={{ padding: '16px' }}>
-            <CardHeader
-              title="Bachelor of Science in Biochemistry and Molecular Biology"
-              subheader="University of California, Davis"
-            ></CardHeader>
-            <CardContent>
-              <ul>
-                <li>
-                  <Typography>
-                    Utilized R programming language for visualization of large
-                    t-test to PCA and clustering, and RNA sequence datasets
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Conducted bioinformatical analyses with Python's PyLab for
-                    plotting
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Lab experience consisting of PCR, Bradford Assay, A280
-                    assay, SDS PAGE, Western blot analysis
-                  </Typography>
-                </li>
-              </ul>
-            </CardContent>
-          </div>
-        </Card>
+      {children}
+      <Box
+        component="header"
+        className={classes.mainContainer}
+        style={{ maxWidth: '1200px', margin: 'auto' }}
+      >
+        <Box component="div" className={classes.timeLine}>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2020
+          </Typography>
+          <Card
+            component="div"
+            className={`${classes.timeLineItem} ${
+              !homepage ? 'animated-left-card' : ''
+            }`}
+            style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
+          >
+            <CardMedia
+              component="img"
+              alt="Project 1"
+              height="140"
+              image={react}
+            />
+            <div style={{ padding: '16px' }}>
+              <CardHeader
+                title="Full Stack Developer"
+                subheader="Freelance"
+              ></CardHeader>
+              <CardContent>
+                <ul>
+                  <li>
+                    <Typography>
+                      Build modern frontend interfaces with centralized state
+                      management that are intuitive and responsively designed
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography>
+                      Knowledge of ES6+, Webpack and best refactoring practices
+                      for low overhead and optimal performance
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography>
+                      Extensive Knowledge of React/Redux, Node/Express, MongoDB
+                    </Typography>
+                  </li>
+                </ul>
+              </CardContent>
+            </div>
+          </Card>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2019
+          </Typography>
+          <Card
+            component="div"
+            className={`${classes.timeLineItem} ${
+              !homepage ? 'animated-right-card' : ''
+            }`}
+            style={{ marginBottom: '1.5rem', marginTop: '1.5rem', padding: 0 }}
+          >
+            <CardMedia
+              component="img"
+              alt="Project 1"
+              height="140"
+              image={army}
+            />
+            <div style={{ padding: '16px' }}>
+              <CardHeader
+                title="Heavy Signal Platoon Leader"
+                subheader="United States Army Reserve"
+              ></CardHeader>
+              <CardContent>
+                <ul>
+                  <li>
+                    <Typography>
+                      Primary planner for a platoon of soldiers’ training and
+                      operations
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography>
+                      Manage 5 million dollars’ worth of vehicles and equipment
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography>
+                      Supervisor of all event execution including large
+                      vehicular movements and mass network communication
+                      equipment setup
+                    </Typography>
+                  </li>
+                </ul>
+              </CardContent>
+            </div>
+          </Card>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2018
+          </Typography>
+          <Card
+            component="div"
+            className={`${classes.timeLineItem} ${
+              !homepage ? 'animated-left-card' : ''
+            }`}
+            style={{
+              marginBottom: '1.5rem',
+              marginTop: '1.5rem',
+              padding: 0,
+              zIndex: 2,
+            }}
+          >
+            <CardMedia
+              component="img"
+              alt="Project 1"
+              height="140"
+              image={bio}
+            />
+            <div style={{ padding: '16px' }}>
+              <CardHeader
+                title="Bachelor of Science in Biochemistry and Molecular Biology"
+                subheader="University of California, Davis"
+              ></CardHeader>
+              <CardContent>
+                <ul>
+                  <li>
+                    <Typography>
+                      Utilized R programming language for visualization of large
+                      t-test to PCA and clustering, and RNA sequence datasets
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography>
+                      Conducted bioinformatical analyses with Python's PyLab for
+                      plotting
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography>
+                      Lab experience consisting of PCR, Bradford Assay, A280
+                      assay, SDS PAGE, Western blot analysis
+                    </Typography>
+                  </li>
+                </ul>
+              </CardContent>
+            </div>
+          </Card>
+        </Box>
       </Box>
-    </Box>
     </>
   );
 };
 
 const Resume = () => {
-  
   return (
     <Container>
       <Experience />

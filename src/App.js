@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/index';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Resume from './components/Resume';
-import Portfolio from './components/Portfolio';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -15,17 +14,17 @@ const App = () => {
   setInterval(() => {
     if (window.scrollY > 500 && window.scrollY < 1600) {
       setLabel('Projects');
-    } else if (window.scrollY > 1600 && window.scrollY < 3800) {
+    } else if (window.scrollY > 1600 && window.scrollY < 3700) {
       setLabel('Experience');
     } else if (
       window.scrollY > 3800 &&
-      window.scrollY < 4500 &&
+      window.scrollY < 4300 &&
       window.screen.width < 500
     ) {
       setLabel('Experience');
-    } else if (window.scrollY > 4500 && window.screen.width < 500) {
+    } else if (window.scrollY > 4300 && window.screen.width < 500) {
       setLabel('Contact');
-    } else if (window.scrollY > 3800 && window.screen.width > 500) {
+    } else if (window.scrollY > 3700 && window.screen.width > 500) {
       setLabel('Message Me');
     } else {
       setLabel('Home');
@@ -43,7 +42,8 @@ const App = () => {
               page={
                 window.location.pathname === '/'
                   ? `${label}`
-                  : window.location.pathname.slice(1).charAt(0).toUpperCase() + window.location.pathname.slice(2)
+                  : window.location.pathname.slice(1).charAt(0).toUpperCase() +
+                    window.location.pathname.slice(2)
               }
             />
           )}
@@ -51,7 +51,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/experience" component={Resume} />
-          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/projects" component={Projects} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
       </Router>

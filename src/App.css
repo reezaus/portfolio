@@ -23,6 +23,7 @@ body .home{
 }
 
 .benis span.animated {
+  z-index: 100;
   position: absolute;
   margin: auto;
   right: 0;
@@ -73,7 +74,6 @@ body .home{
 .header {
   z-index: -1 !important;
   margin-top: -10rem;
-  /* clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%); */
   clip-path: polygon(5% 50%, 100% 50%, 100% 100%, 50% 100%);
   height: 8 0vh;
   background-color: tomato; 
@@ -92,11 +92,6 @@ body .home{
 
 .blue-header {
   background-color: #3f51b5; 
-  /* z-index: -1 !important;
-  margin-top: -13rem;
-  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-  height: 60vh;
-  text-align: center; */
   z-index: 0 !important;
   margin-top: -13rem;
   clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
@@ -123,9 +118,14 @@ body .home{
   animation-fill-mode: backwards;
 }
 
+.moveUp {
+  animation: moveUp .45s ease-out .1s;
+  animation-fill-mode: backwards;
+}
+
 ul {
-  /* margin-top: 0;
-  list-style-type: none; */
+  padding-inline-start: 0px;
+  list-style-type: none;
 }
 
 li {
@@ -146,17 +146,6 @@ li {
 .animated-right {
   animation: moveInRight .6s ease-out;
   animation-delay: .5;
-}
-
-@keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
 }
 
 @keyframes moveInLeft {
