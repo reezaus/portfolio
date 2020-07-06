@@ -39,9 +39,8 @@ const PortfolioMini = () => {
   const classes = useStyles();
 
   return (
-    <div>
       <Box component="div" className={classes.mainContainer}>
-        <Grid container justify="center">
+        <Grid container justify="center" style={{ maxWidth: '1200px', margin: 'auto'}}>
           {/* Project 1 */}
           <Grid item xs={12} sm={8} md={6} style={{ marginBottom: '10vw' }}>
             <Card className={classes.cardContainer}>
@@ -172,7 +171,7 @@ const PortfolioMini = () => {
             xs={12}
             sm={8}
             md={6}
-            style={{ zIndex: 2, marginTop: '20vw', marginBottom: '-10vh' }}
+            style={{ zIndex: 2, marginTop: '20vw', marginBottom: '-5vh' }}
           >
             <Card className={classes.cardContainer}>
               <CardActionArea href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/">
@@ -211,15 +210,12 @@ const PortfolioMini = () => {
             </Card>
           </Grid>
         </Grid>
-        <Experience style={{ marginTop: '0vh' }} homepage>
+        <Experience homepage>
           <div className="orange-header">
             <Typography
               variant="h2"
-              style={{ color: 'white', paddingTop: '0%', lineHeight: '1.08' }}
+              style={{  color: 'white', paddingTop: '27vh'}}
             >
-              <br />
-              <br />
-              <br />
               Experience
             </Typography>
           </div>
@@ -228,17 +224,13 @@ const PortfolioMini = () => {
           <div className="blue-header">
             <Typography
               variant="h2"
-              style={{ color: 'white', paddingTop: '0%', lineHeight: '1.08' }}
+              style={{ color: 'white', paddingTop: '27vh', lineHeight: '1.08' }}
             >
-              <br />
-              <br />
-              <br />
               Contact
             </Typography>
           </div>
         </Contact>
       </Box>
-    </div>
   );
 };
 

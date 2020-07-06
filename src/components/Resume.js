@@ -14,105 +14,113 @@ import army from '../images/armySMALL.jpg';
 import react from '../images/reactjsSMALL.jpg';
 import bio from '../images/bio.jpg';
 
-const useStyles = makeStyles((theme) => ({
-  mainContainer: {
-    margin: 0,
-    paddingTop: '8%',
-    background: '#E5E5E5',
-    width: '100%',
-    position: 'relative',
-  },
-  timeLine: {
-    position: 'relative',
-    paddingTop: '3rem',
-    padding: '2rem',
-    margin: '0 auto',
-    '&:before': {},
-    '&:after': {
-      content: "''",
-      display: 'table',
-      clear: 'both',
+
+
+export const Experience = ({ children, homepage}) => {
+    let myPadding;
+  if (homepage) {
+    myPadding = 0
+  } else {
+    myPadding = '8%'
+  }
+  const useStyles = makeStyles((theme) => ({
+    mainContainer: {
+      margin: 0,
+      paddingTop: myPadding,
+      background: '#E5E5E5',
+      width: '100%',
+      position: 'relative',
     },
-    [theme.breakpoints.up('md')]: {
+    timeLine: {
+      position: 'relative',
+      paddingTop: '3rem',
       padding: '2rem',
+      margin: '0 auto',
+      '&:before': {},
+      '&:after': {
+        content: "''",
+        display: 'table',
+        clear: 'both',
+      },
+      [theme.breakpoints.up('md')]: {
+        padding: '2rem',
+        '&:before': {
+          content: "''",
+          position: 'absolute',
+          height: '64%',
+          border: '1px solid tan',
+          right: '50%',
+          bottom: '660px',
+        },
+      },
+    },
+    timeLineItem: {
+      padding: '1rem',
+      position: 'relative', //important
+      // margin: '.3rem 1.5rem 3rem .5rem',
+      margin: '.3rem auto 0rem auto',
+      left: '0',
+      clear: 'both',
+      '&:after': {
+        content: "''",
+        // position: 'absolute'
+      },
       '&:before': {
         content: "''",
         position: 'absolute',
-        height: '64%',
-        border: '1px solid tan',
         right: '50%',
-        bottom: '660px',
+        borderStyle: 'solid',
+        borderColor: 'transparent',
+        borderWidth: '0.625rem',
+        transform: 'rotate(45deg)',
+        left: '0',
       },
-    },
-  },
-  timeLineItem: {
-    padding: '1rem',
-    position: 'relative', //important
-    // margin: '.3rem 1.5rem 3rem .5rem',
-    margin: '.3rem auto 0rem auto',
-    left: '0',
-    clear: 'both',
-    '&:after': {
-      content: "''",
-      // position: 'absolute'
-    },
-    '&:before': {
-      content: "''",
-      position: 'absolute',
-      right: '50%',
-      borderStyle: 'solid',
-      borderColor: 'transparent',
-      borderWidth: '0.625rem',
-      transform: 'rotate(45deg)',
-      left: '0',
-    },
-    [theme.breakpoints.up('md')]: {
-      width: '44%',
-      margin: '1rem',
-      '&:nth-of-type(2n)': {
-        float: 'right',
+      [theme.breakpoints.up('md')]: {
+        width: '44%',
         margin: '1rem',
-      }, // keeps item floating left or right
-      // '&:nth-of-type(2n):before': {
-      //   right: 'auto',
-      //   left: '-0.625rem',
-      //   borderColor: 'transparent transparent transparent transparent'
-      // }
-    },
-  },
-  timeLineYear: {
-    boxShadow: '5px 10px 20px rgba(0,0,0,.2)',
-    textAlign: 'center',
-    borderRadius: '1.5rem',
-    maxWidth: '9.375rem',
-    margin: '0 3rem 0 auto',
-    fontSize: '1.8rem',
-    background: 'tomato',
-    color: 'white',
-    lineHeight: 1,
-    padding: '1rem',
-    '&:before': {
-      display: 'none',
-    },
-    [theme.breakpoints.up('md')]: {
-      textAlign: 'center',
-      margin: '0 auto',
-      '&:nth-of-type(2n)': {
-        float: 'none',
-        margin: '0 auto',
+        '&:nth-of-type(2n)': {
+          float: 'right',
+          margin: '1rem',
+        }, // keeps item floating left or right
+        // '&:nth-of-type(2n):before': {
+        //   right: 'auto',
+        //   left: '-0.625rem',
+        //   borderColor: 'transparent transparent transparent transparent'
+        // }
       },
-      '&:nth-of-type(2n):before': {
+    },
+    timeLineYear: {
+      boxShadow: '5px 10px 20px rgba(0,0,0,.2)',
+      textAlign: 'center',
+      borderRadius: '1.5rem',
+      maxWidth: '9.375rem',
+      margin: '0 3rem 0 auto',
+      fontSize: '1.8rem',
+      background: 'tomato',
+      color: 'white',
+      lineHeight: 1,
+      padding: '1rem',
+      '&:before': {
         display: 'none',
       },
+      [theme.breakpoints.up('md')]: {
+        textAlign: 'center',
+        margin: '0 auto',
+        '&:nth-of-type(2n)': {
+          float: 'none',
+          margin: '0 auto',
+        },
+        '&:nth-of-type(2n):before': {
+          display: 'none',
+        },
+      },
     },
-  },
-}));
-
-export const Experience = ({ children, homepage}) => {
+  }));
   const classes = useStyles();
   return (
-    <Box component="header" className={classes.mainContainer}>
+    <>
     {children}
+    <Box component="header" className={classes.mainContainer} style={{ maxWidth: '1200px', margin: 'auto'}}>
       <Box component="div" className={classes.timeLine}>
         <Typography
           variant="h2"
@@ -246,6 +254,7 @@ export const Experience = ({ children, homepage}) => {
         </Card>
       </Box>
     </Box>
+    </>
   );
 };
 

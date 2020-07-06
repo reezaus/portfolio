@@ -12,12 +12,14 @@ import SendIcon from '@material-ui/icons/Send';
 import Typography from '@material-ui/core/Typography';
 
 export const Contact = ({ children }) => {
-  let myMargin;
+  let myMargin, myBottom;
   if (children) {
      myMargin = '-8rem'
+     myBottom ='0vh'
   } else {
     // myMargin = '10rem'
-    myMargin = '15vh'
+    myMargin = '15vh';
+    myBottom = '-30vh';
   }
   const useStyles = makeStyles({
     mainContainer: {
@@ -25,12 +27,13 @@ export const Contact = ({ children }) => {
       height: '100%',
       width: '100%',
       position: 'absolute',
-      marginBottom: '0vh'
+      marginBottom: myBottom
     },
     cardContainer: {
       marginTop: myMargin,
       marginBottom: '0',
       minWidth: '40%',
+      minHeight: 450,
       padding: '1.25rem',
       maxWidth: 345,
       zIndex: 5
@@ -112,7 +115,7 @@ export const Contact = ({ children }) => {
                 name="message"
                 value={message}
                 label="Message"
-                rows="3"
+                rows="5"
                 multiline
                 onChange={handleMessageChange}
                 fullWidth

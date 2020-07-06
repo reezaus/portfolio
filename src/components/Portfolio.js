@@ -46,10 +46,10 @@ const Portfolio = () => {
 
   return (
     <Box component="div" className={classes.mainContainer}>
-      <Grid container justify="center">
+      <Grid container justify="center" style={{ maxWidth: '1200px', margin: 'auto'  }}>
         {/* Project 1 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer} style={{ marginTop: '4rem', marginBottom: '-2rem'}}>
+          <Card className={`${classes.cardContainer} animated-left-card`} style={{ marginTop: '4rem', marginBottom: '-2rem'}}>
             <CardActionArea href="https://crwn-apparelite.herokuapp.com/">
               <CardMedia
                 component="img"
@@ -81,7 +81,7 @@ const Portfolio = () => {
         </Grid>
         {/* Project 2 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer} style={{ marginTop: '4rem'}}>
+          <Card className={`${classes.cardContainer} animated-left-card`} style={{ marginTop: '4rem'}}>
             <CardActionArea href="https://thawing-dusk-15894.herokuapp.com/">
               <CardMedia
                 component="img"
@@ -116,7 +116,7 @@ const Portfolio = () => {
 
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer}>
+          <Card className ={`${classes.cardContainer} animated-right-card`}>
             <CardActionArea href="https://nameless-escarpment-65829.herokuapp.com/login">
               <CardMedia
                 component="img"
@@ -149,7 +149,7 @@ const Portfolio = () => {
         </Grid>
         {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
-          <Card className={classes.cardContainer} style={{ marginBottom: '2rem'}}>
+          <Card className ={`${classes.cardContainer} animated-right-card`} style={{ marginBottom: '2rem'}}>
             <CardActionArea href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/">
               <CardMedia
                 component="img"
