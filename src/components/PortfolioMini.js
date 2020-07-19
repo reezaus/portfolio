@@ -166,7 +166,7 @@ const PortfolioMini = () => {
           style={{ zIndex: 2, marginTop: '20vw', marginBottom: '-5vh' }}
         >
           <Card className={classes.cardContainer}>
-            <CardActionArea href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/">
+            <CardActionArea href="https://infallible-lalande-1d6690.netlify.app/">
               <CardMedia
                 component="img"
                 alt="Project 2"
@@ -190,7 +190,7 @@ const PortfolioMini = () => {
               <Button
                 size="small"
                 color="primary"
-                href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/"
+                href="https://infallible-lalande-1d6690.netlify.app/"
               >
                 VISIT
               </Button>

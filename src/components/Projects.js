@@ -16,7 +16,7 @@ import project2 from '../images/githubFinder.png';
 import project3 from '../images/ContactKeeper.png';
 import project4 from '../images/project4.png';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   paper: {
     position: 'absolute',
     width: 400,
@@ -162,7 +162,7 @@ const Projects = () => {
             className={`${classes.cardContainer} animated-right-card`}
             style={{ marginBottom: '2rem' }}
           >
-            <CardActionArea href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/">
+            <CardActionArea href="https://infallible-lalande-1d6690.netlify.app/">
               <CardMedia
                 component="img"
                 alt="Project 2"
@@ -186,7 +186,7 @@ const Projects = () => {
               <Button
                 size="small"
                 color="primary"
-                href="https://5ea165e0e8e85af9568e1fed--githubfinder20300.netlify.app/"
+                href="https://infallible-lalande-1d6690.netlify.app/"
               >
                 Visit
               </Button>

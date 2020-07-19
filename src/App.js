@@ -12,20 +12,47 @@ import ScrollToTop from './components/ScrollToTop';
 const App = () => {
   const [label, setLabel] = useState('Home');
   setInterval(() => {
-    if (window.scrollY > 500 && window.scrollY < 1600) {
-      setLabel('Projects');
-    } else if (window.scrollY > 1600 && window.scrollY < 3700) {
-      setLabel('Experience');
-    } else if (
-      window.scrollY > 3800 &&
-      window.scrollY < 4300 &&
-      window.screen.width < 500
-    ) {
-      setLabel('Experience');
-    } else if (window.scrollY > 4300 && window.screen.width < 500) {
-      setLabel('Contact');
-    } else if (window.scrollY > 3700 && window.screen.width > 500) {
-      setLabel('Message Me');
+    if (window.screen.width > 500) {
+      if (
+        window.scrollY > window.screen.height * 3.5 &&
+        window.screen.width > 1300
+      ) {
+        setLabel('Contact');
+      } else if (window.scrollY < window.screen.height * 0.8) {
+        setLabel('Home');
+      } else if (
+        window.scrollY > window.screen.height * 0.8 &&
+        window.scrollY < 1.8 * window.screen.height
+      ) {
+        setLabel('Projects');
+      } else if (
+        window.scrollY > window.screen.height * 1.8 &&
+        window.scrollY < window.screen.height * 4
+      ) {
+        setLabel('Experience');
+      } else if (
+        window.scrollY > window.screen.height * 4 &&
+        window.screen.width < 1400
+      ) {
+        setLabel('Contact');
+      }
+    } else if (window.screen.width < 500) {
+      if (window.scrollY < window.screen.height * 0.8) {
+        setLabel('Home');
+      } else if (
+        window.scrollY > window.screen.height * 0.8 &&
+        window.scrollY < 2.7 * window.screen.height
+      ) {
+        setLabel('Projects');
+      } else if (
+        window.scrollY > window.screen.height * 2.7 &&
+        window.scrollY < window.screen.height * 5.8
+      ) {
+        setLabel('Experience');
+      }
+      if (window.scrollY > window.screen.height * 5.8) {
+        setLabel('Contact');
+      }
     } else {
       setLabel('Home');
     }
