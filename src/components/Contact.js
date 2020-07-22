@@ -33,7 +33,7 @@ export const Contact = ({ children, homepage }) => {
       minWidth: '40%',
       minHeight: 450,
       padding: '1.25rem',
-      maxWidth: 345,
+      maxWidth: 400,
       zIndex: 5,
     },
     [theme.breakpoints.up("xl")]: {
