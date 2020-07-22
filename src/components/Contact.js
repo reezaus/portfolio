@@ -30,10 +30,10 @@ export const Contact = ({ children, homepage }) => {
     cardContainer: {
       marginTop: myMargin,
       marginBottom: '0',
-      margin: `${myMargin} 0 0 0`,
+      margin: `${myMargin} auto 0 auto`,
       minHeight: 450,
       padding: '.5rem',
-      minWidth: 400,
+      minWidth: 380,
       zIndex: 5,
     },
     [theme.breakpoints.up("xl")]: {
