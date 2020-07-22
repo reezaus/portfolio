@@ -82,25 +82,25 @@ body .home{
   text-align: center;
 }
 
-/* .orange-header {
-  background-color: tomato; 
+.orange-header {
+  /* background-color: tomato; 
   z-index: 0 !important;
-  margin-top: -13rem;
+  margin-top: -13rem; */
   clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
-  height: 60vh;
+  /* height: 60vh;
   text-align: center;
-  width: 100vw;
-} */
+  width: 100vw; */
+}
 
-/* .blue-header {
-  background-color: #3f51b5; 
+.blue-header {
+  /* background-color: #3f51b5; 
   z-index: 0 !important;
-  margin-top: -13rem;
+  margin-top: -13rem; */
   clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
-  height: 60vh;
+  /* height: 60vh;
   text-align: center;
-  width: 100vw;
-} */
+  width: 100vw; */
+}
 .terminal {
   justify-content: right;
   text-align: left;
