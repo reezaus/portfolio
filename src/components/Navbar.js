@@ -35,6 +35,31 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     color: 'white',
   },
+  [theme.breakpoints.up('xl')]: {
+    menuSliderContainer: {
+      width: 500,
+    },
+    avatar: {
+      display: 'block',
+      margin: '4rem auto',
+      width: theme.spacing(25),
+      height: theme.spacing(25),
+    },
+    appBar: {
+      height: 96,
+      padding: 16
+    },
+    listItem: {
+      padding: 10,
+    },
+    "@global": {
+      html: {
+        [theme.breakpoints.up("xl")]: {
+          fontSize: 24
+        }
+      }
+    }
+  },
 }));
 
 const menuIcons = [
@@ -99,6 +124,7 @@ const Navbar = (props) => {
         <AppBar
           position="fixed"
           style={{ background: '#232F34', width: '100%' }}
+          className={classes.appBar}
         >
           <Toolbar>
             <IconButton onClick={toggleSlider('right', true)}>

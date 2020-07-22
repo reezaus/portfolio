@@ -24,7 +24,6 @@ export const Experience = ({ children, homepage }) => {
     mainContainer: {
       margin: 0,
       paddingTop: myPadding,
-      background: '#E5E5E5',
       width: '100%',
       position: 'relative',
     },
@@ -48,6 +47,17 @@ export const Experience = ({ children, homepage }) => {
           border: '1px solid tan',
           right: '50%',
           bottom: '660px',
+        },
+      },
+      [theme.breakpoints.up('xl')]: {
+        padding: '2rem',
+        '&:before': {
+          content: "''",
+          position: 'absolute',
+          height: '64%',
+          border: '1px solid tan',
+          right: '50%',
+          bottom: '820px',
         },
       },
     },
@@ -85,9 +95,22 @@ export const Experience = ({ children, homepage }) => {
         //   borderColor: 'transparent transparent transparent transparent'
         // }
       },
+      [theme.breakpoints.up('lg')]: {
+        width: '66%',
+        margin: '-10vw',
+        '&:nth-of-type(2n)': {
+          float: 'right',
+          margin: '-10vw',
+        }, // keeps item floating left or right
+        // '&:nth-of-type(2n):before': {
+        //   right: 'auto',
+        //   left: '-0.625rem',
+        //   borderColor: 'transparent transparent transparent transparent'
+        // }
+      },
     },
     timeLineYear: {
-      boxShadow: '5px 10px 20px rgba(0,0,0,.2)',
+      boxShadow: '5px 10px 20px rgba(0,0,0,.25)',
       textAlign: 'center',
       borderRadius: '1.5rem',
       maxWidth: '9.375rem',

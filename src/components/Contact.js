@@ -19,7 +19,7 @@ export const Contact = ({ children, homepage }) => {
     myMargin = '15vh';
     myBottom = '-30vh';
   }
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     mainContainer: {
       background: '#E5E5E5',
       height: '100%',
@@ -36,7 +36,12 @@ export const Contact = ({ children, homepage }) => {
       maxWidth: 345,
       zIndex: 5,
     },
-  });
+    [theme.breakpoints.up("xl")]: {
+      cardContainer: {
+        minWidth: '30%'
+      }
+    }
+  }));
   const classes = useStyles();
 
   const [name, setName] = React.useState('');

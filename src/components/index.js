@@ -53,7 +53,8 @@ const Home = () => {
             borderBottom: '120px #E5E5E5 solid',
             marginBottom: '-1px',
           }}
-        ></div>
+        >
+        </div>
         <PortfolioMini />
         <Particles
           canvasClassName={classes.particlesCanva}
