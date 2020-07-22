@@ -271,7 +271,7 @@ const PortfolioMini = () => {
       </Grid>
       <Experience homepage>
         <div style={{ filter: 'drop-shadow(1px 1px 1px rgba(0,0,0,0.5))'}}>
-        <div className={classes.orangeHeader}>
+        <div id="orange-header" className={classes.orangeHeader}>
           <Typography
             variant="h2"
             style={{ color: 'white', paddingTop: '27vh' }}
