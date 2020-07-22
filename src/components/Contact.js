@@ -30,6 +30,7 @@ export const Contact = ({ children, homepage }) => {
     cardContainer: {
       marginTop: myMargin,
       marginBottom: '0',
+      margin: `${myMargin} auto 0 auto`,
       minWidth: '40%',
       minHeight: 450,
       padding: '1.25rem',
