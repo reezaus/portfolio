@@ -23,7 +23,7 @@ const Home = () => {
           <div
             onClick={() =>
               window.scrollTo({
-                top: window.screen.height - 150,
+                top: window.screen.height - 180,
                 behavior: 'smooth',
               })
             }
