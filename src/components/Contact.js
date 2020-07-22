@@ -31,10 +31,9 @@ export const Contact = ({ children, homepage }) => {
       marginTop: myMargin,
       marginBottom: '0',
       margin: `${myMargin} 0 0 0`,
-      minWidth: '40%',
       minHeight: 450,
       padding: '.5rem',
-      maxWidth: 400,
+      minWidth: 400,
       zIndex: 5,
     },
     [theme.breakpoints.up("xl")]: {
