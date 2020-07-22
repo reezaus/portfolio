@@ -33,7 +33,7 @@ export const Contact = ({ children, homepage }) => {
       margin: `${myMargin} auto 0 auto`,
       minHeight: 450,
       padding: '.5rem',
-      minWidth: 340,
+      minWidth: 350,
       zIndex: 5,
     },
     [theme.breakpoints.up("xl")]: {
