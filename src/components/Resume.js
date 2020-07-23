@@ -180,13 +180,12 @@ export const Experience = ({ children, homepage }) => {
                   </li>
                   <li>
                     <Typography>
-                      Knowledge of ES6+, Webpack and best refactoring practices
-                      for low overhead and optimal performance
+                    Build fast, scalable and powerful microservice-based web-apps running in Docker containers executed in a Kubernetes cluster.
                     </Typography>
                   </li>
                   <li>
                     <Typography>
-                      Extensive Knowledge of React/Redux, Node/Express, MongoDB
+                      Extensive Knowledge of Javascript, React (Hooks/Redux), Node, Express, MongoDB, Docker, and Kubernetes.
                     </Typography>
                   </li>
                 </ul>
@@ -221,20 +220,17 @@ export const Experience = ({ children, homepage }) => {
                 <ul>
                   <li>
                     <Typography>
-                      Primary planner for a platoon of soldiers’ training and
-                      operations
+                    Head 30 man team in providing military network infrastructure to various clients
                     </Typography>
                   </li>
                   <li>
                     <Typography>
-                      Manage 5 million dollars’ worth of vehicles and equipment
+                    Maintain inventory of 5 million dollars’ worth of sensitive vehicles and equipment
                     </Typography>
                   </li>
                   <li>
                     <Typography>
-                      Supervisor of all event execution including large
-                      vehicular movements and mass network communication
-                      equipment setup
+                    Oversee entire project lifecycle including planning, development, mass-network setup/maintenance, and client support
                     </Typography>
                   </li>
                 </ul>
