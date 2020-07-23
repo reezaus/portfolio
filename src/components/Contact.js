@@ -36,11 +36,16 @@ export const Contact = ({ children, homepage }) => {
       minWidth: 350,
       zIndex: 5,
     },
-    [theme.breakpoints.up("xl")]: {
+    [theme.breakpoints.up("md")]: {
+      cardContainer: {
+        minWidth: '40%'
+      }
+    },
+    [theme.breakpoints.up("lg")]: {
       cardContainer: {
         minWidth: '30%'
       }
-    }
+    },
   }));
   const classes = useStyles();
 
