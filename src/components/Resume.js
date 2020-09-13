@@ -12,6 +12,7 @@ import {
 import army from '../images/armySMALL.jpg';
 import react from '../images/reactjsSMALL.jpg';
 import bio from '../images/bio.jpg';
+import marble from '../images/marble.jpg';
 
 export const Experience = ({ children, homepage }) => {
   let myPadding;
@@ -180,12 +181,15 @@ export const Experience = ({ children, homepage }) => {
                   </li>
                   <li>
                     <Typography>
-                    Build fast, scalable and powerful microservice-based web-apps running in Docker containers executed in a Kubernetes cluster.
+                      Build fast, scalable and powerful microservice-based
+                      web-apps running in Docker containers executed in a
+                      Kubernetes cluster.
                     </Typography>
                   </li>
                   <li>
                     <Typography>
-                      Extensive Knowledge of Javascript, React (Hooks/Redux), Node, Express, MongoDB, Docker, and Kubernetes.
+                      Extensive Knowledge of Javascript, React (Hooks/Redux),
+                      Node, Express, MongoDB, Docker, and Kubernetes.
                     </Typography>
                   </li>
                 </ul>
@@ -209,28 +213,25 @@ export const Experience = ({ children, homepage }) => {
               component="img"
               alt="Project 1"
               height="140"
-              image={army}
+              image={marble}
             />
             <div style={{ padding: '16px' }}>
               <CardHeader
-                title="Heavy Signal Platoon Leader"
-                subheader="United States Army Reserve"
+                title="Frontend Developer"
+                subheader="Marble Creators"
               ></CardHeader>
               <CardContent>
                 <ul>
                   <li>
                     <Typography>
-                    Head 30 man team in providing military network infrastructure to various clients
+                      Collaborate with designers and back-end developers to improve in app
+                      notifications, email notifications, messaging, and other
+                      general bug fixes.
                     </Typography>
                   </li>
                   <li>
                     <Typography>
-                    Maintain inventory of 5 million dollars’ worth of sensitive vehicles and equipment
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography>
-                    Oversee entire project lifecycle including planning, development, mass-network setup/maintenance, and client support
+                    Work with the UI Designer on artistic digital design and provide animations, CSS, and final HTML output
                     </Typography>
                   </li>
                 </ul>
